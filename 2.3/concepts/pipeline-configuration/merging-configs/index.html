@@ -1603,7 +1603,7 @@
 <p>After the first Pipeline Configuration has been set, each subsequent Pipeline Configuration can define root-level blocks and properties but <strong>can't</strong> modify properties or blocks that were previously set unless <strong>explicitly</strong> permitted by the previous configuration.</p>
 <h3 id="permitting-modifications">Permitting Modifications<a class="headerlink" href="#permitting-modifications" title="Permanent link">&para;</a></h3>
 <p>Pipeline Configurations must explicitly define which blocks and properties can be modified by the next configuration in the configuration chain.</p>
-<p>This is done through the <code>@override</code> and <code>@merge</code> annoations.</p>
+<p>This is done through the <code>@override</code> and <code>@merge</code> annotations.</p>
 <h3 id="override"><code>@override</code><a class="headerlink" href="#override" title="Permanent link">&para;</a></h3>
 <p>The <code>@override</code> annotation is used to permit block-level changes or to permit specific properties to be changed.</p>
 <p>Setting <code>@override</code> on a block will allow the next configuration to change any property in the block.</p>

@@ -1582,7 +1582,7 @@
                 
                 
                 <h1 id="application-environments">Application Environments<a class="headerlink" href="#application-environments" title="Permanent link">&para;</a></h1>
-<p>The Application Environment primitive allows users to encaspulate environmental context. Users can define custom fields from the <a href="../../pipeline-configuration/overview/">Pipeline Configuration</a>.</p>
+<p>The Application Environment primitive allows users to encapsulate environmental context. Users can define custom fields from the <a href="../../pipeline-configuration/overview/">Pipeline Configuration</a>.</p>
 <h2 id="defining-application-environments">Defining Application Environments<a class="headerlink" href="#defining-application-environments" title="Permanent link">&para;</a></h2>
 <p>The <code>application_environments{}</code> block is used to define application environments.</p>
 <p>Within the application environments block, environments are defined through nested keys.</p>
@@ -1594,7 +1594,7 @@
 </code></pre></div>
 <h2 id="default-fields">Default Fields<a class="headerlink" href="#default-fields" title="Permanent link">&para;</a></h2>
 <p>Application environments can define the optional fields <code>short_name</code> and <code>long_name</code>.</p>
-<p>If not decalred, these fields will default to the application environment key.</p>
+<p>If not declared, these fields will default to the application environment key.</p>
 <p>For example:</p>
 <div class="highlight"><pre><span></span><code><span class="n">application_environments</span><span class="o">{</span>
   <span class="n">dev</span>
@@ -1643,7 +1643,7 @@
 </tbody>
 </table>
 <h2 id="determining-application-environment-order">Determining Application Environment Order<a class="headerlink" href="#determining-application-environment-order" title="Permanent link">&para;</a></h2>
-<p>The order application environments are defined within the pipline configuration are used to define <code>previous</code> and <code>next</code> properties.</p>
+<p>The order application environments are defined within the pipeline configuration are used to define <code>previous</code> and <code>next</code> properties.</p>
 <p>For example, defining the following application environments</p>
 <div class="highlight"><pre><span></span><code><span class="n">application_environments</span><span class="o">{</span>
   <span class="n">dev</span>

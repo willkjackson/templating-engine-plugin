@@ -1597,7 +1597,7 @@
 <p>Step Aliasing allows library developers to cast the same step to one or more step names at runtime by using the <code>@StepAlias</code> annotation.</p>
 <p>By default, steps will assume the basename of the files that define them. i.e, a <code>build.groovy</code> step file will create a <code>build</code> step.</p>
 <p>Step Aliasing, allows you to change the name (or names) of the step that's going to be created.</p>
-<p>This annotation is automatically imported, just like xref:lifecycle_hooks.adoc[lifecycle hooks].</p>
+<p>This annotation is automatically imported, just like <a href="../lifecycle-hooks/">lifecycle hooks</a>.</p>
 <h2 id="static-step-aliases">Static Step Aliases<a class="headerlink" href="#static-step-aliases" title="Permanent link">&para;</a></h2>
 <p>Static step aliases are static lists of strings to cast the step to at runtime.</p>
 <h3 id="single-static-alias">Single Static Alias<a class="headerlink" href="#single-static-alias" title="Permanent link">&para;</a></h3>
@@ -1608,7 +1608,7 @@
 <span class="o">}</span>
 </code></pre></div>
 <ol>
-<li><code>generic.groovy</code> will be invokable at runtime via <code>build()</code></li>
+<li><code>generic.groovy</code> will be invocable at runtime via <code>build()</code></li>
 </ol>
 <h3 id="multiple-static-aliases">Multiple Static Aliases<a class="headerlink" href="#multiple-static-aliases" title="Permanent link">&para;</a></h3>
 <p><code>@StepAlias</code> can also accept an array of Strings to alias the step to multiple names.</p>
@@ -1623,7 +1623,7 @@
 <h2 id="dynamic-step-aliases">Dynamic Step Aliases<a class="headerlink" href="#dynamic-step-aliases" title="Permanent link">&para;</a></h2>
 <p>Sometimes, aliases should themselves be determined at runtime.
 This can be accomplished by providing a <code>dynamic</code> parameter that should be a <code>Closure</code> that returns a string or list of strings.</p>
-<p>For example, if a library called <code>alias</code> had a step called <code>generic.groovy</code> then an <code>aliases</code> library paramter could be created:</p>
+<p>For example, if a library called <code>alias</code> had a step called <code>generic.groovy</code> then an <code>aliases</code> library parameter could be created:</p>
 <div class="highlight"><pre><span></span><code><span class="n">libraries</span><span class="o">{</span>
   <span class="n">alias</span><span class="o">{</span>
     <span class="n">aliases</span> <span class="o">=</span> <span class="o">[</span><span class="s2">&quot;build&quot;</span><span class="o">,</span> <span class="s2">&quot;unit_test&quot;</span><span class="o">]</span> <span class="o">[</span><span class="mi">1</span><span class="o">]</span>
@@ -1644,7 +1644,7 @@ This can be accomplished by providing a <code>dynamic</code> parameter that shou
 </ol>
 <h2 id="keeping-the-original-step">Keeping the Original Step<a class="headerlink" href="#keeping-the-original-step" title="Permanent link">&para;</a></h2>
 <p>By default, when <code>@StepAlias</code> is present in a step file, a step with the original name <strong>won't</strong> be created.</p>
-<p>This behavior can be overridden via the <code>keepOriginal</code> annotation paramter.</p>
+<p>This behavior can be overridden via the <code>keepOriginal</code> annotation parameter.</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@StepAlias</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;build&quot;</span><span class="o">,</span> <span class="n">keepOriginal</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span> <span class="o">[</span><span class="mi">1</span><span class="o">]</span>
 <span class="kt">void</span> <span class="nf">call</span><span class="o">(){</span>
     <span class="n">println</span> <span class="s2">&quot;running as either build() or generic()&quot;</span>
