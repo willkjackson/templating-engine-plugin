@@ -908,9 +908,46 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Library Resolution
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Library Resolution
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#default-resolution-order" class="md-nav__link">
+    Default Resolution Order
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inverting-resolution-order" class="md-nav__link">
+    Inverting Resolution Order
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1454,6 +1491,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#default-resolution-order" class="md-nav__link">
+    Default Resolution Order
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inverting-resolution-order" class="md-nav__link">
+    Inverting Resolution Order
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1470,6 +1529,17 @@
                 
                 
                 <h1 id="library-resolution">Library Resolution<a class="headerlink" href="#library-resolution" title="Permanent link">&para;</a></h1>
+<p>Each <a href="../governance-tier/">Governance Tier</a> in the <a href="../configuration-hierarchy/">Configuration Hierarchy</a> can store a list of <a href="../../library-development/library-source/">Library Sources</a>.</p>
+<p>This page explains the order in which JTE will try to resolve and load a Library if multiple Library Sources have the same library.</p>
+<h2 id="default-resolution-order">Default Resolution Order<a class="headerlink" href="#default-resolution-order" title="Permanent link">&para;</a></h2>
+<p><img align="center" alt="A figure depicting the default resolution order for libraries" src="../library-resolution-default.png" /></p>
+<p>JTE will search for Libraries within Library Sources starting with the Governance Tier most proximal to the Job in the taxonomy.</p>
+<p>The Library Sources will be queried for the library starting with the first Library Source in the list on the Governance Tier before proceeding to any subsequent Library Sources.</p>
+<p>If the Library Sources configured on the first Governance Tier don't have the Library being loaded, JTE will then check the parent Governance Tier.</p>
+<p>If the Library can't be found after searching every Governance Tier, the Pipeline Run will fail.</p>
+<h2 id="inverting-resolution-order">Inverting Resolution Order<a class="headerlink" href="#inverting-resolution-order" title="Permanent link">&para;</a></h2>
+<p>To invert this resolution order, set <code>jte.reverse_library_resolution</code> to <code>True</code>.</p>
+<p><img align="center" alt="A figure depicting the inverted resolution order for libraries" src="../library-resolution-inverted.png" /></p>
                 
               
               
