@@ -45,17 +45,6 @@
     
       
 
-  
-
-
-  
-
-  
-
-
-  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-144247959-2","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
-  <script async src="https://www.google-analytics.com/analytics.js"></script>
-
 
     
     
@@ -1603,7 +1592,7 @@
 <p>After the first Pipeline Configuration has been set, each subsequent Pipeline Configuration can define root-level blocks and properties but <strong>can't</strong> modify properties or blocks that were previously set unless <strong>explicitly</strong> permitted by the previous configuration.</p>
 <h3 id="permitting-modifications">Permitting Modifications<a class="headerlink" href="#permitting-modifications" title="Permanent link">&para;</a></h3>
 <p>Pipeline Configurations must explicitly define which blocks and properties can be modified by the next configuration in the configuration chain.</p>
-<p>This is done through the <code>@override</code> and <code>@merge</code> annotations.</p>
+<p>This is done through the <code>@override</code> and <code>@merge</code> annoations.</p>
 <h3 id="override"><code>@override</code><a class="headerlink" href="#override" title="Permanent link">&para;</a></h3>
 <p>The <code>@override</code> annotation is used to permit block-level changes or to permit specific properties to be changed.</p>
 <p>Setting <code>@override</code> on a block will allow the next configuration to change any property in the block.</p>

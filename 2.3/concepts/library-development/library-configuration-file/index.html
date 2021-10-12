@@ -45,17 +45,6 @@
     
       
 
-  
-
-
-  
-
-  
-
-
-  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-144247959-2","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
-  <script async src="https://www.google-analytics.com/analytics.js"></script>
-
 
     
     
@@ -1545,12 +1534,12 @@
 <p>Currently, the library configuration file is only used to validate library configurations.</p>
 <div class="admonition info">
 <p class="admonition-title">Reference</p>
-<p>A comprehensive overview of the <a href="../../../reference/library-configuration-schema/">library configuration schema</a> can be found in the Reference section.</p>
+<p>A comprensive overview of the <a href="../../../reference/library-configuration-schema/">library configuration schema</a> can be found in the Reference section.</p>
 </div>
 <h2 id="advanced-library-validations">Advanced Library Validations<a class="headerlink" href="#advanced-library-validations" title="Permanent link">&para;</a></h2>
 <p>For library parameter validations that more complex than what can be accomplished through the library configuration functionality, library developers can alternatively create a step annotated with the <a href="../lifecycle-hooks/"><code>@Validate</code> Lifecycle Hook</a>.</p>
 <p>Methods within steps annotated with <code>@Validate</code> will execute before the pipeline template.</p>
-<p>For example, if a library wanted to validate a more complex use case such as ensuring a library parameter named <code>threshold</code> was greater than or equal to zero but less than or equal to 100 the following could be implemented:</p>
+<p>For example, if a library wanted to validate a more complex use case such as ensuring a library parameter named <code>threshold</code> was greater than or equal to zero but less than or equal to 100 the following could be implemetned:</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@Validate</span> <span class="o">[</span><span class="mi">1</span><span class="o">]</span>
 <span class="kt">void</span> <span class="nf">call</span><span class="o">(</span><span class="n">context</span><span class="o">){</span> <span class="o">[</span><span class="mi">2</span><span class="o">]</span>
   <span class="k">if</span><span class="o">(</span><span class="n">config</span><span class="o">.</span><span class="na">threshold</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">config</span><span class="o">.</span><span class="na">threshold</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="o">){</span> <span class="o">[</span><span class="mi">3</span><span class="o">]</span>

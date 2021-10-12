@@ -45,17 +45,6 @@
     
       
 
-  
-
-
-  
-
-  
-
-
-  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-144247959-2","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
-  <script async src="https://www.google-analytics.com/analytics.js"></script>
-
 
     
     
@@ -1588,7 +1577,7 @@ Check out the <a href="../../pipeline-templates/declarative-syntax/#step-resolut
 <div class="highlight"><pre><span></span><code><span class="c1">// support the original node interface</span>
 <span class="kt">void</span> <span class="nf">call</span><span class="o">(</span><span class="n">String</span> <span class="n">label</span> <span class="o">=</span> <span class="kc">null</span><span class="o">,</span> <span class="n">Closure</span> <span class="n">body</span><span class="o">){</span>
     <span class="k">if</span><span class="o">(</span><span class="n">label</span><span class="o">){</span>
-      <span class="n">steps</span><span class="o">.</span><span class="na">node</span><span class="o">(</span><span class="n">label</span><span class="o">,</span> <span class="n">body</span><span class="o">)</span> <span class="c1">// steps var used to access original &quot;node&quot; implementation</span>
+      <span class="n">steps</span><span class="o">.</span><span class="na">node</span><span class="o">(</span><span class="n">label</span><span class="o">,</span> <span class="n">body</span><span class="o">)</span> <span class="c1">// steps var used to access origianl &quot;node&quot; implementation</span>
     <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
       <span class="n">steps</span><span class="o">.</span><span class="na">node</span><span class="o">(</span><span class="n">body</span><span class="o">)</span>
     <span class="o">}</span>

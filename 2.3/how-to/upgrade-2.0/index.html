@@ -45,17 +45,6 @@
     
       
 
-  
-
-
-  
-
-  
-
-
-  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-144247959-2","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
-  <script async src="https://www.google-analytics.com/analytics.js"></script>
-
 
     
     
@@ -1670,7 +1659,7 @@ These annotations can be placed on individual fields within a block, enabling fi
 <div class="highlight"><pre><span></span><code><span class="nd">@merge</span> <span class="n">someBlock</span><span class="o">{</span> <span class="c1">// future configs can add fields to this block</span>
   <span class="n">my_governed_field</span> <span class="o">=</span> <span class="s2">&quot;some value&quot;</span>
 <span class="o">}</span>
-<span class="n">anotherBlock</span><span class="o">{</span> <span class="c1">// future configs can&#39;t add fields to this block</span>
+<span class="n">anotherBlock</span><span class="o">{</span> <span class="c1">// futre configs can&#39;t add fields to this block</span>
   <span class="n">may_not_be_changed</span> <span class="o">=</span> <span class="kc">true</span> <span class="c1">// not modifiable</span>
   <span class="nd">@override</span> <span class="n">default_value</span> <span class="o">=</span> <span class="kc">true</span>  <span class="c1">// may be overridden</span>
 <span class="o">}</span>
