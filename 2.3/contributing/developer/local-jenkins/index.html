@@ -1787,11 +1787,11 @@
 <div class="highlight"><pre><span></span><code>just run -e <span class="nv">SOMEVAR</span><span class="o">=</span><span class="s2">&quot;some var&quot;</span>
 </code></pre></div>
 <h2 id="mounting-local-libraries-for-testing">Mounting local libraries for testing<a class="headerlink" href="#mounting-local-libraries-for-testing" title="Permanent link">&para;</a></h2>
-<p>Local directories can be configured as Git SCM library sources even if they don't have a remote repository.</p>
+<p>Local directories can be configured as Git SCM Library Sources even if they don't have a remote repository.</p>
 <p>For example, if <code>~/local-libraries</code> is a directory containing a local git repository then to mount it to the container you would run:</p>
 <div class="highlight"><pre><span></span><code>just run -v ~/local-libraries:/local-libraries 
 </code></pre></div>
-<p>You could then configure a library source using the file protocol to specify the repository location at <code>file:///local-libraries</code></p>
+<p>You could then configure a Library Source using the file protocol to specify the repository location at <code>file:///local-libraries</code></p>
 <!-- markdownlint-disable -->
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>

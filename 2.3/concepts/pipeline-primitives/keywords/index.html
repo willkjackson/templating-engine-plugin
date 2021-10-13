@@ -1784,9 +1784,9 @@
                 
                 
                 <h1 id="keywords">Keywords<a class="headerlink" href="#keywords" title="Permanent link">&para;</a></h1>
-<p>Keywords let users declare variables from the <a href="../../pipeline-configuration/overview/">pipeline configuration</a> that can be resolved from the <a href="../../pipeline-templates/overview/">pipeline template</a> or <a href="../steps/">library steps</a>.</p>
+<p>Keywords let users declare variables from the <a href="../../pipeline-configuration/overview/">Pipeline Configuration</a> that can be resolved from the <a href="../../pipeline-templates/overview/">Pipeline Template</a> or <a href="../steps/">Library Steps</a>.</p>
 <h2 id="defining-keywords">Defining Keywords<a class="headerlink" href="#defining-keywords" title="Permanent link">&para;</a></h2>
-<p>Keywords are defined via the <code>keywords{}</code> block in the pipeline configuration.</p>
+<p>Keywords are defined via the <code>keywords{}</code> block in the Pipeline Configuration.</p>
 <p>For example,</p>
 <div class="highlight"><pre><span></span><code><span class="n">keywords</span><span class="o">{</span>
   <span class="n">foo</span> <span class="o">=</span> <span class="s2">&quot;bar&quot;</span> 
@@ -1795,7 +1795,7 @@
 <p>would then result in a <code>foo</code> variable with the value <code>"bar"</code>.</p>
 <h2 id="use-cases">Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h2>
 <h3 id="global-variables">Global Variables<a class="headerlink" href="#global-variables" title="Permanent link">&para;</a></h3>
-<p>Keywords can be used to define a <code>globals</code> variable accessible from the pipeline template and library steps.</p>
+<p>Keywords can be used to define a <code>globals</code> variable accessible from the Pipeline Template and Library Steps.</p>
 <div class="highlight"><pre><span></span><code><span class="n">keywords</span><span class="o">{</span>
   <span class="n">globals</span><span class="o">{</span>
     <span class="n">one</span> <span class="o">=</span> <span class="mi">1</span>
@@ -1804,7 +1804,7 @@
 <span class="o">}</span>
 </code></pre></div>
 <h3 id="regular-expressions-for-conditionals">Regular Expressions for Conditionals<a class="headerlink" href="#regular-expressions-for-conditionals" title="Permanent link">&para;</a></h3>
-<p>Keywords can be used to define regular expressions corresponding to common branch names for use from the pipeline template to keep the template easy to read.  </p>
+<p>Keywords can be used to define regular expressions corresponding to common branch names for use from the Pipeline Template to keep the template easy to read.  </p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Pipeline Configuration</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="n">keywords</span><span class="o">{</span>
   <span class="n">main</span> <span class="o">=</span> <span class="o">~</span><span class="s">/^[mM]a(in|ster)$/</span>

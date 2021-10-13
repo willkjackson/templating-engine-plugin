@@ -1892,7 +1892,7 @@
 <tbody>
 <tr>
 <td><code>pipelineConfig</code></td>
-<td>Represents the aggregated pipeline configuration</td>
+<td>Represents the aggregated Pipeline Configuration</td>
 <td>Accessible everywhere</td>
 </tr>
 <tr>
@@ -1902,27 +1902,27 @@
 </tr>
 <tr>
 <td><code>config</code></td>
-<td>Represents a library's configuration provided by the aggregated pipeline configuration</td>
-<td>Within <a href="../../concepts/library-development/library-steps/">library steps</a></td>
+<td>Represents a library's configuration provided by the aggregated Pipeline Configuration</td>
+<td>Within <a href="../../concepts/library-development/library-steps/">Library Steps</a></td>
 </tr>
 <tr>
 <td><code>stepContext</code></td>
 <td>Enables step introspection. Especially helpful when using <a href="../../concepts/library-development/step-aliasing/">Step Aliasing</a></td>
-<td>Within <a href="../../concepts/library-development/library-steps/">library steps</a></td>
+<td>Within <a href="../../concepts/library-development/library-steps/">Library Steps</a></td>
 </tr>
 <tr>
 <td><code>hookContext</code></td>
 <td>Represents contextual information for <a href="../../concepts/library-development/lifecycle-hooks/">Lifecycle Hooks</a></td>
-<td>Within <a href="../../concepts/library-development/library-steps/">library steps</a></td>
+<td>Within <a href="../../concepts/library-development/library-steps/">Library Steps</a></td>
 </tr>
 </tbody>
 </table>
 <h2 id="autowired-global-variables">Autowired Global Variables<a class="headerlink" href="#autowired-global-variables" title="Permanent link">&para;</a></h2>
 <h3 id="pipelineconfig"><code>pipelineConfig</code><a class="headerlink" href="#pipelineconfig" title="Permanent link">&para;</a></h3>
-<p>The <code>pipelineConfig</code> is accessible from everywhere and allows access to the aggregated pipeline configuration as a <a href="https://docs.groovy-lang.org/latest/html/groovy-jdk/java/util/Map.html">Map</a>.</p>
+<p>The <code>pipelineConfig</code> is accessible from everywhere and allows access to the aggregated Pipeline Configuration as a <a href="https://docs.groovy-lang.org/latest/html/groovy-jdk/java/util/Map.html">Map</a>.</p>
 <div class="admonition example">
 <p class="admonition-title">Example Usage of <code>pipelineConfig</code></p>
-<p>An example of accessing the pipeline configuration via <code>pipelineConfig</code>:</p>
+<p>An example of accessing the Pipeline Configuration via <code>pipelineConfig</code>:</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Pipeline Configuration</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="n">keywords</span><span class="o">{</span>
   <span class="n">foo</span> <span class="o">=</span> <span class="s2">&quot;bar&quot;</span>
@@ -1940,7 +1940,7 @@
 <h3 id="jte"><code>jte</code><a class="headerlink" href="#jte" title="Permanent link">&para;</a></h3>
 <p>The <code>jte</code> variable represents the <a href="../../concepts/pipeline-primitives/primitive-namespace/">Primitive Namespace</a>.</p>
 <p>All loaded Pipeline Primitives for a Run can be accessed via the <code>jte</code> variable</p>
-<p>This is different from the <code>pipelineConfig</code> variable. The <code>pipelineConfig</code> variable gives a Map representation of the aggregated pipeline configuration whereas the <code>jte</code> variable allows access to the <em>actual Pipeline Primitive objects</em>.</p>
+<p>This is different from the <code>pipelineConfig</code> variable. The <code>pipelineConfig</code> variable gives a Map representation of the aggregated Pipeline Configuration whereas the <code>jte</code> variable allows access to the <em>actual Pipeline Primitive objects</em>.</p>
 <div class="admonition example">
 <p class="admonition-title">Example Usage of <code>jte</code></p>
 <p>Assume there's a <code>gradle</code> and an <code>npm</code> library that both contribute a <code>build()</code> step.</p>
@@ -1969,7 +1969,7 @@
 <p class="admonition-title"><code>jte</code> block vs <code>jte</code> variable</p>
 <p>You may have noticed in the example above that a <code>jte{}</code> block is used in the Pipeline Configuration and a <code>jte</code> variable is used in the Pipeline Template.</p>
 <p>These are different things. </p>
-<p>The <code>jte{}</code> block refers to framework-level feature flags as explained on the <a href="../pipeline-configuration-schema/">pipeline configuration schema</a> page.</p>
+<p>The <code>jte{}</code> block refers to framework-level feature flags as explained on the <a href="../pipeline-configuration-schema/">Pipeline Configuration schema</a> page.</p>
 <p>The <code>jte</code> variable refers to the <a href="../../concepts/pipeline-primitives/primitive-namespace/">Pipeline Primitive Namespace</a> variable. </p>
 </div>
 <h3 id="steps"><code>steps</code><a class="headerlink" href="#steps" title="Permanent link">&para;</a></h3>
@@ -1978,7 +1978,7 @@ It's a feature of all Jenkins Pipelines.</p>
 <p>The <code>steps</code> variable allows direct access to invoke Jenkins Pipeline DSL Steps.</p>
 <p>This variable is most commonly used when invoking Jenkins Pipeline DSL Steps from a <a href="../../concepts/library-development/library-classes/">Library Class</a> or when <a href="../../concepts/advanced/overloading-steps/">Overloading Steps</a>.</p>
 <h2 id="autowired-library-step-variables">Autowired Library Step Variables<a class="headerlink" href="#autowired-library-step-variables" title="Permanent link">&para;</a></h2>
-<p>The following variables are only accessible within <a href="../../concepts/library-development/library-steps/">library steps</a>.</p>
+<p>The following variables are only accessible within <a href="../../concepts/library-development/library-steps/">Library Steps</a>.</p>
 <h3 id="config"><code>config</code><a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>The <code>config</code> variable represents the library configuration for the library that contributed the step as a <a href="https://docs.groovy-lang.org/latest/html/groovy-jdk/java/util/Map.html">Map</a>.</p>
 <div class="admonition example">
@@ -2019,7 +2019,7 @@ It's a feature of all Jenkins Pipelines.</p>
 <tr>
 <td><code>step</code></td>
 <td><code>String</code></td>
-<td>The name of the <a href="../../concepts/library-development/library-steps/">library step</a> that triggered the Lifecycle Hook. Is <code>null</code> when the Lifecycle Hook wasn't triggered by a step.</td>
+<td>The name of the <a href="../../concepts/library-development/library-steps/">Library Step</a> that triggered the Lifecycle Hook. Is <code>null</code> when the Lifecycle Hook wasn't triggered by a step.</td>
 </tr>
 </tbody>
 </table>

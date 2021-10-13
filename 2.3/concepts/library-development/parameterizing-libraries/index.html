@@ -1773,7 +1773,7 @@
                 
                 <h1 id="parameterizing-libraries">Parameterizing Libraries<a class="headerlink" href="#parameterizing-libraries" title="Permanent link">&para;</a></h1>
 <p>One of the major benefits of organizing your pipeline code into libraries is the ability to reuse these libraries across different teams.</p>
-<p>To achieve this level of reusability, it's best to externalize hard coded values as parameters that can be set from the pipeline configuration repository.</p>
+<p>To achieve this level of reusability, it's best to externalize hard coded values as parameters that can be set from the Pipeline Configuration repository.</p>
 <h2 id="pass-parameters-through-the-pipeline-configuration">Pass Parameters Through the Pipeline Configuration<a class="headerlink" href="#pass-parameters-through-the-pipeline-configuration" title="Permanent link">&para;</a></h2>
 <p>When specifying a library to be loaded, users can pass arbitrary configurations to the library:</p>
 <div class="highlight"><pre><span></span><code><span class="n">libraries</span><span class="o">{</span>
@@ -1797,14 +1797,14 @@ All parameters can be at the root level or a nested structure can be created to 
 Library parameter values can be any serializable Groovy primitive.
 Typically, parameters are boolean, numeric, String, or array.</p>
 <h2 id="accessing-library-configurations-within-steps">Accessing Library Configurations Within Steps<a class="headerlink" href="#accessing-library-configurations-within-steps" title="Permanent link">&para;</a></h2>
-<p>The Jenkins Templating Engine injects a <code>config</code> variable into each step. This <code>config</code> variable is a map whose keys are the library parameters that have been provided through the pipeline configuration.</p>
-<p>The <code>config</code> variable is only resolvable within a library step and only contains the configuration for the step's library.</p>
+<p>The Jenkins Templating Engine injects a <code>config</code> variable into each step. This <code>config</code> variable is a map whose keys are the library parameters that have been provided through the Pipeline Configuration.</p>
+<p>The <code>config</code> variable is only resolvable within a Library Step and only contains the configuration for the step's library.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you need to access the entire aggregated pipeline configuration, JTE injects a <code>pipelineConfig</code> variable that can be accessed anywhere.</p>
+<p>If you need to access the entire aggregated Pipeline Configuration, JTE injects a <code>pipelineConfig</code> variable that can be accessed anywhere.</p>
 </div>
 <h2 id="validating-library-configurations">Validating Library Configurations<a class="headerlink" href="#validating-library-configurations" title="Permanent link">&para;</a></h2>
-<p>The pipeline configuration doesn't inherently perform type checking or validation.</p>
+<p>The Pipeline Configuration doesn't inherently perform type checking or validation.</p>
 <p>Library developers can choose to provide a <a href="../library-configuration-file/">Library Configuration File</a> at the root of the library's directory which will assist with library parameter validation.</p>
                 
               

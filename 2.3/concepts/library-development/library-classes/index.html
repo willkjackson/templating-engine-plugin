@@ -1786,16 +1786,16 @@
 <div class="highlight"><pre><span></span><code><span class="kn">package</span> <span class="n">example</span>
 <span class="kd">class</span> <span class="nc">Utility</span> <span class="kd">implements</span> <span class="n">Serializable</span> <span class="o">{}</span>
 </code></pre></div>
-<p>This is because Jenkins pipeline's implement a design pattern called <a href="https://github.com/jenkinsci/workflow-cps-plugin#technical-design">Continuation Passing Style (CPS)</a> so that individual pipeline runs can resume progress.</p>
+<p>This is because Jenkins pipeline's implement a design pattern called <a href="https://github.com/jenkinsci/workflow-cps-plugin#technical-design">Continuation Passing Style (CPS)</a> so that individual Pipeline Runs can resume progress.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To learn more, check out <a href="https://www.jenkins.io/doc/book/pipeline/pipeline-best-practices/#avoiding-notserializableexception">Best Practices for Avoiding Serializability Exceptions</a></p>
 </div>
 <h2 id="classpath">Classpath<a class="headerlink" href="#classpath" title="Permanent link">&para;</a></h2>
-<p>Classes contributed by loaded libraries can be imported from the library's steps, steps from other libraries, and the pipeline template.</p>
+<p>Classes contributed by loaded libraries can be imported from the library's steps, steps from other libraries, and the Pipeline Template.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Importing a library class from a pipeline template or from a step outside the library will lead to tight coupling.</p>
+<p>Importing a library class from a Pipeline Template or from a step outside the library will lead to tight coupling.</p>
 <p>In general, library classes should be utilized <em>within</em> steps from the <strong>same library</strong></p>
 </div>
 <h2 id="jenkins-step-resolution">Jenkins Step Resolution<a class="headerlink" href="#jenkins-step-resolution" title="Permanent link">&para;</a></h2>

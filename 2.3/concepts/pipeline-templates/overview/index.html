@@ -1781,7 +1781,7 @@ Regular Jenkins DSL pipeline steps like <code>node</code>, <code>sh</code>, and 
 <p>What's different, though, is what happens before the template is executed.
 During <a href="../../advanced/pipeline-initialization/">Pipeline Initialization</a>, Pipeline Primitives are created and made available to the Pipeline Template.</p>
 <h2 id="defining-workflows-not-tech-stacks">Defining Workflows, not Tech Stacks<a class="headerlink" href="#defining-workflows-not-tech-stacks" title="Permanent link">&para;</a></h2>
-<p>While creating JTE, it was envisioned that a pipeline template represents a <em>workflow</em> - not a pipeline for a specific tech stack.</p>
+<p>While creating JTE, it was envisioned that a Pipeline Template represents a <em>workflow</em> - not a pipeline for a specific tech stack.</p>
 <p>Be careful of the common pitfall of creating an <code>npm</code> template for all your NPM applications and a <code>java</code> template for all your Java applications.</p>
 <p>If you find yourself doing this - compare those templates and see if there would be a way to make converge with more general step names in a common workflow.</p>
 <p>One example of having multiple workflows would be if there were two branching strategies used throughout the organization or if JTE was being used for infrastructure pipelines as well as application pipelines.</p>

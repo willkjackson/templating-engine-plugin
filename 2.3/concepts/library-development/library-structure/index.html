@@ -1746,7 +1746,7 @@
                 <h1 id="library-structure">Library Structure<a class="headerlink" href="#library-structure" title="Permanent link">&para;</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>Each directory within a <a href="/docs/concepts/library-development/library-source.md">Library Source</a> is a different library that can be loaded via the <a href="../../pipeline-configuration/overview/">Pipeline Configuration</a></p>
-<p>The name of the directory is the library identifier used within the pipeline configuration <code>libraries{}</code> block when loading the library.</p>
+<p>The name of the directory is the library identifier used within the Pipeline Configuration <code>libraries{}</code> block when loading the library.</p>
 <table>
 <thead>
 <tr>
@@ -1761,11 +1761,11 @@
 </tr>
 <tr>
 <td><code>resources/**/*</code></td>
-<td>any file under the <code>resources</code> directory will be accessible from within library steps via the <code>resource()</code> step</td>
+<td>any file under the <code>resources</code> directory will be accessible from within Library Steps via the <code>resource()</code> step</td>
 </tr>
 <tr>
 <td><code>src/**/*</code></td>
-<td>Classes contributed by the library that can be imported from within <a href="../../pipeline-templates/overview/">pipeline templates</a> and <a href="../library-steps/">steps</a></td>
+<td>Classes contributed by the library that can be imported from within <a href="../../pipeline-templates/overview/">Pipeline Templates</a> and <a href="../library-steps/">steps</a></td>
 </tr>
 <tr>
 <td><code>library_config.groovy</code></td>
