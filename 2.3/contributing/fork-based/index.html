@@ -290,6 +290,8 @@
           
             
               
+                
+              
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -1367,9 +1369,46 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Fork-Based Contribution Model
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Fork-Based Contribution Model
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#add-the-upstream-remote" class="md-nav__link">
+    Add the Upstream Remote
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contribution-workflow" class="md-nav__link">
+    Contribution Workflow
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1656,7 +1695,9 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1666,6 +1707,28 @@
   
     
   
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#add-the-upstream-remote" class="md-nav__link">
+    Add the Upstream Remote
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contribution-workflow" class="md-nav__link">
+    Contribution Workflow
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1683,9 +1746,72 @@
                 
                 
                 <h1 id="fork-based-contribution-model">Fork-Based Contribution Model<a class="headerlink" href="#fork-based-contribution-model" title="Permanent link">&para;</a></h1>
-<p>Regardless of whether you're contributing to the docs or the code, JTE follows a fork-based contribution model.</p>
-<p>Also called a <a href="https://docs.github.com/en/github/collaborating-with-pull-requests/getting-started/about-collaborative-development-models#fork-and-pull-model">Fork and Pull Model</a>, it works through contributors <a href="https://docs.github.com/en/github/collaborating-with-pull-requests/working-with-forks/about-forks">Forking</a> the <a href="https://github.com/jenkinsci/templating-engine-plugin">main JTE repository</a>.</p>
-<p>Contributors work on feature branches in their own forks and, when ready, submit a <a href="https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">Pull Request</a> back to the main JTE repository.</p>
+<p>JTE follows a fork-based contribution model, also called a <a href="https://docs.github.com/en/github/collaborating-with-pull-requests/getting-started/about-collaborative-development-models#fork-and-pull-model">Fork and Pull Model</a>.</p>
+<p>Contributors work in their own <a href="https://docs.github.com/en/github/collaborating-with-pull-requests/working-with-forks/about-forks">Forks</a> on Feature Branches and send changes through <a href="https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">Pull Requests</a> to the <a href="https://github.com/jenkinsci/templating-engine-plugin">main branch of the upstream JTE repository</a>.</p>
+<h2 id="add-the-upstream-remote">Add the Upstream Remote<a class="headerlink" href="#add-the-upstream-remote" title="Permanent link">&para;</a></h2>
+<p>After forking the upstream repository, it's helpful to add the upstream repository as a remote.</p>
+<p>This can be done by running the command:</p>
+<div class="highlight"><pre><span></span><code>git remote add upstream https://github.com/jenkinsci/templating-engine-plugin.git
+</code></pre></div>
+<h2 id="contribution-workflow">Contribution Workflow<a class="headerlink" href="#contribution-workflow" title="Permanent link">&para;</a></h2>
+<p>After creating your fork and adding the upstream remote, use the following workflow to submit changes to JTE:</p>
+<p><img alt="An overview visualization of the Contribution Workflow described below" class="center" src="../contribution-workflow.png" width="75%" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="center">Step</th>
+<th>Description</th>
+<th>Git Commands <img width=200/></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td align="center">Create a Feature Branch</td>
+<td>Create a branch specifically for your change</td>
+<td><code>git checkout -B &lt;branch_name&gt;</code><br><code>git push --set-upstream origin &lt;branch_name&gt;</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td align="center">Push Changes</td>
+<td>Push incremental changes to your feature branch</td>
+<td><code>git add &lt;files&gt;</code><br><code>git commit -m &lt;message&gt;</code><br><code>git push origin &lt;branch_name&gt;</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td align="center">Submit a Pull Request</td>
+<td>Open a Pull Request to the <code>main</code> branch of the JTE repository</td>
+<td>Done via the GitHub web interface</td>
+</tr>
+<tr>
+<td>4</td>
+<td align="center">Incorporate Feedback</td>
+<td>The JTE maintainers may provide some feedback.</td>
+<td><code>git add &lt;files&gt;</code><br><code>git commit -m &lt;message&gt;</code><br><code>git push origin &lt;branch_name&gt;</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td align="center">Merge</td>
+<td>Once accepted, JTE maintainers will merge the PR</td>
+<td>no action on contributor's part</td>
+</tr>
+<tr>
+<td>6</td>
+<td align="center">Resynchronize with upstream</td>
+<td>The merge will squash the commits, so realign your fork with upstream</td>
+<td><code>git checkout main</code><br><code>git fetch --all</code><br><code>git merge upstream/main</code><br><code>git push origin main</code></td>
+</tr>
+<tr>
+<td>7</td>
+<td align="center">Delete your Feature Branch</td>
+<td>Your feature branch can now be removed</td>
+<td><code>git branch -d &lt;branch_name&gt;</code><br><code>git push origin --delete &lt;branch_name&gt;</code></td>
+</tr>
+</tbody>
+</table>
+                
+                  
                 
               
               
