@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.5143246d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a57b2b03.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -900,6 +900,8 @@
       </a>
       
         
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1706,6 +1708,8 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1825,7 +1829,7 @@ For example, if you wanted to send multiple notification types after a particula
 If the return object of this closure is <a href="http://www.groovy-lang.org/semantics.html#Groovy-Truth[truthy">http://www.groovy-lang.org/semantics.html#Groovy-Truth[truthy</a>] then the hook will be executed.</p>
 <p>While executing, the code within the <code>Closure</code> parameter will be able to resolve the <code>hookContext</code> variable, the library configuration of the library that loads the step via the <code>config</code> variable, and the <code>currentBuild</code> variable made available in Jenkins Pipelines.</p>
 <p>Example Syntax:</p>
-<div class="highlight"><pre><span></span><code><span class="nd">@BeforeStep</span><span class="o">({</span> <span class="n">hookContext</span><span class="o">.</span><span class="na">step</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s2">&quot;build&quot;</span><span class="o">)</span> <span class="o">})</span>
+<div class="highlight"><span class="filename">library_step.groovy</span><pre><span></span><code><span class="nd">@BeforeStep</span><span class="o">({</span> <span class="n">hookContext</span><span class="o">.</span><span class="na">step</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s2">&quot;build&quot;</span><span class="o">)</span> <span class="o">})</span>
 <span class="kt">void</span> <span class="nf">call</span><span class="o">(){</span>
     <span class="c1">// execute something right before the Library Step called build is executed.</span>
 <span class="o">}</span>
@@ -1928,10 +1932,10 @@ If the return object of this closure is <a href="http://www.groovy-lang.org/sema
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": {"provider": "mike", "default": "latest"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": {"provider": "mike", "default": "latest"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.f89c2efe.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b1047164.min.js"></script>
       
     
   </body>

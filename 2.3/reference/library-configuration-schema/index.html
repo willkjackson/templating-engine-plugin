@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.5143246d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -1191,6 +1191,8 @@
       </a>
       
         
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1744,6 +1746,8 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1839,7 +1843,7 @@
 <p>This page outlines the schema for <a href="../../concepts/library-development/library-configuration-file/">Library Configuration Files</a>.</p>
 <h2 id="library-configuration-validation">Library Configuration Validation<a class="headerlink" href="#library-configuration-validation" title="Permanent link">&para;</a></h2>
 <h3 id="schema">Schema<a class="headerlink" href="#schema" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">fields</span><span class="o">{</span> <span class="o">[</span><span class="mi">1</span><span class="o">]</span>
+<div class="highlight"><span class="filename">library_config.groovy</span><pre><span></span><code><span class="n">fields</span><span class="o">{</span> <span class="o">[</span><span class="mi">1</span><span class="o">]</span>
   <span class="n">required</span><span class="o">{}</span> <span class="o">[</span><span class="mi">2</span><span class="o">]</span>
   <span class="n">optional</span><span class="o">{}</span> <span class="o">[</span><span class="mi">3</span><span class="o">]</span>
 <span class="o">}</span>
@@ -1876,7 +1880,7 @@ The presence of extraneous parameters will fail the build. </p>
 <div class="admonition example">
 <p class="admonition-title">Type Validation Example</p>
 <div class="tabbed-set" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Library Configuration File</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="n">fields</span><span class="o">{</span>
+<div class="highlight"><span class="filename">library_config.groovy</span><pre><span></span><code><span class="n">fields</span><span class="o">{</span>
   <span class="n">required</span><span class="o">{</span>
     <span class="n">parameterA</span> <span class="o">=</span> <span class="n">String</span> <span class="o">[</span><span class="mi">1</span><span class="o">]</span>
     <span class="n">parameterB</span> <span class="o">=</span> <span class="n">Number</span> <span class="o">[</span><span class="mi">2</span><span class="o">]</span>
@@ -1894,16 +1898,16 @@ The presence of extraneous parameters will fail the build. </p>
 <li>ensures that <code>parameterA</code> was configured and is an instance of a String</li>
 <li>ensures that <code>parameterB</code> was configured and is an instance of a Number</li>
 <li>ensures that <code>parameterC</code> was configured and is an instance of a Boolean</li>
-<li><em>if</em> <code>parameterD</code> was configured, ensures it's a String</li>
-<li><em>if</em> <code>parameterE</code> was configured, ensures it's a Boolean</li>
 </ol>
 </div>
+<p>4.<em>if</em><code>parameterD</code> was configured, ensures it's a String
+5.<em>if</em> <code>parameterE</code> was configured, ensures it's a Boolean</p>
 <h4 id="enum-validation">Enum Validation<a class="headerlink" href="#enum-validation" title="Permanent link">&para;</a></h4>
 <p>The enum validation ensures that a library parameter value is one of the options defined by a list in the library configuration.</p>
 <div class="admonition example">
 <p class="admonition-title">Enum Validation Example</p>
 <div class="tabbed-set" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Library Configuration File</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="n">fields</span><span class="o">{</span>
+<div class="highlight"><span class="filename">library_config.groovy</span><pre><span></span><code><span class="n">fields</span><span class="o">{</span>
   <span class="n">required</span><span class="o">{</span>
     <span class="n">parameterA</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;a&quot;</span><span class="o">,</span> <span class="s2">&quot;b&quot;</span><span class="o">,</span> <span class="mi">11</span> <span class="o">]</span> <span class="o">[</span><span class="mi">1</span><span class="o">]</span>
   <span class="o">}</span>
@@ -1920,7 +1924,7 @@ The presence of extraneous parameters will fail the build. </p>
 <div class="admonition example">
 <p class="admonition-title">Regular Expression Example</p>
 <div class="tabbed-set" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Library Configuration File</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="n">fields</span><span class="o">{</span>
+<div class="highlight"><span class="filename">library_config.groovy</span><pre><span></span><code><span class="n">fields</span><span class="o">{</span>
   <span class="n">required</span><span class="o">{</span>
     <span class="n">parameterA</span> <span class="o">=</span> <span class="o">~</span><span class="s">/^s.*/</span> <span class="o">[</span><span class="mi">1</span><span class="o">]</span>
   <span class="o">}</span>
@@ -1936,7 +1940,7 @@ The presence of extraneous parameters will fail the build. </p>
 <p>Library parameters can be arbitrarily nested within the pipeline configuration.</p>
 <p>For example, the following pipeline configuration would be valid to pass the <code>example.nestedParameter</code> parameter to a library named <code>testing</code>.</p>
 <div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">Pipeline Configuration</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="n">libraries</span><span class="o">{</span>
+<div class="highlight"><span class="filename">pipeline_config.groovy</span><pre><span></span><code><span class="n">libraries</span><span class="o">{</span>
   <span class="n">testing</span><span class="o">{</span>
     <span class="n">example</span><span class="o">{</span>
       <span class="n">nestedParameter</span> <span class="o">=</span> <span class="mi">11</span>
@@ -1946,7 +1950,7 @@ The presence of extraneous parameters will fail the build. </p>
 </code></pre></div>
 </div>
 <input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">Library Configuration</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="n">fields</span><span class="o">{</span>
+<div class="highlight"><span class="filename">library_config.groovy</span><pre><span></span><code><span class="n">fields</span><span class="o">{</span>
   <span class="n">required</span><span class="o">{</span>
     <span class="n">example</span><span class="o">{</span>
       <span class="n">nestedParameter</span> <span class="o">=</span> <span class="n">Number</span>
@@ -2054,10 +2058,10 @@ The presence of extraneous parameters will fail the build. </p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": {"provider": "mike", "default": "latest"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": {"provider": "mike", "default": "latest"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.f89c2efe.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
       
     
   </body>

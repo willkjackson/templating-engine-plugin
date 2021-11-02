@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.5143246d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a57b2b03.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -725,6 +725,8 @@
       </a>
       
         
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1719,6 +1721,8 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1788,7 +1792,7 @@
 <h2 id="defining-keywords">Defining Keywords<a class="headerlink" href="#defining-keywords" title="Permanent link">&para;</a></h2>
 <p>Keywords are defined via the <code>keywords{}</code> block in the Pipeline Configuration.</p>
 <p>For example,</p>
-<div class="highlight"><pre><span></span><code><span class="n">keywords</span><span class="o">{</span>
+<div class="highlight"><span class="filename">pipeline_config.groovy</span><pre><span></span><code><span class="n">keywords</span><span class="o">{</span>
   <span class="n">foo</span> <span class="o">=</span> <span class="s2">&quot;bar&quot;</span> 
 <span class="o">}</span>
 </code></pre></div>
@@ -1796,7 +1800,7 @@
 <h2 id="use-cases">Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h2>
 <h3 id="global-variables">Global Variables<a class="headerlink" href="#global-variables" title="Permanent link">&para;</a></h3>
 <p>Keywords can be used to define a <code>globals</code> variable accessible from the Pipeline Template and Library Steps.</p>
-<div class="highlight"><pre><span></span><code><span class="n">keywords</span><span class="o">{</span>
+<div class="highlight"><span class="filename">pipeline_config.groovy</span><pre><span></span><code><span class="n">keywords</span><span class="o">{</span>
   <span class="n">globals</span><span class="o">{</span>
     <span class="n">one</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="n">two</span> <span class="o">=</span> <span class="mi">2</span>
@@ -1806,14 +1810,14 @@
 <h3 id="regular-expressions-for-conditionals">Regular Expressions for Conditionals<a class="headerlink" href="#regular-expressions-for-conditionals" title="Permanent link">&para;</a></h3>
 <p>Keywords can be used to define regular expressions corresponding to common branch names for use from the Pipeline Template to keep the template easy to read.  </p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Pipeline Configuration</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="n">keywords</span><span class="o">{</span>
+<div class="highlight"><span class="filename">pipeline_config.groovy</span><pre><span></span><code><span class="n">keywords</span><span class="o">{</span>
   <span class="n">main</span> <span class="o">=</span> <span class="o">~</span><span class="s">/^[mM]a(in|ster)$/</span>
   <span class="n">develop</span> <span class="o">=</span> <span class="o">~</span><span class="s">/^[Dd]evelop(ment|er|)$/</span>
 <span class="o">}</span>
 </code></pre></div>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Pipeline Template</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="n">on_pull_request</span> <span class="nl">to:</span> <span class="n">develop</span><span class="o">,</span> <span class="o">{</span>
+<div class="highlight"><span class="filename">Jenkinsfile</span><pre><span></span><code><span class="n">on_pull_request</span> <span class="nl">to:</span> <span class="n">develop</span><span class="o">,</span> <span class="o">{</span>
   <span class="cm">/*</span>
 <span class="cm">    execute on a PR to branches matching the regular expression</span>
 <span class="cm">    defined by the &quot;develop&quot; keyword</span>
@@ -1933,10 +1937,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": {"provider": "mike", "default": "latest"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": {"provider": "mike", "default": "latest"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.f89c2efe.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b1047164.min.js"></script>
       
     
   </body>

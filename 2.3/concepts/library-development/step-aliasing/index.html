@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.5143246d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a57b2b03.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -928,6 +928,8 @@
       </a>
       
         
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1726,6 +1728,8 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1806,7 +1810,7 @@
 <p>Static step aliases are static lists of strings to cast the step to at runtime.</p>
 <h3 id="single-static-alias">Single Static Alias<a class="headerlink" href="#single-static-alias" title="Permanent link">&para;</a></h3>
 <p><code>@StepAlias</code> can take a <code>String</code> parameter to change the name of the step at runtime.</p>
-<div class="highlight"><pre><span></span><code><span class="nd">@StepAlias</span><span class="o">(</span><span class="s2">&quot;build&quot;</span><span class="o">)</span> <span class="o">[</span><span class="mi">1</span><span class="o">]</span>
+<div class="highlight"><span class="filename">generic.groovy</span><pre><span></span><code><span class="nd">@StepAlias</span><span class="o">(</span><span class="s2">&quot;build&quot;</span><span class="o">)</span> <span class="o">[</span><span class="mi">1</span><span class="o">]</span>
 <span class="kt">void</span> <span class="nf">call</span><span class="o">(){</span>
     <span class="n">println</span> <span class="s2">&quot;running as build!&quot;</span>
 <span class="o">}</span>
@@ -1816,7 +1820,7 @@
 </ol>
 <h3 id="multiple-static-aliases">Multiple Static Aliases<a class="headerlink" href="#multiple-static-aliases" title="Permanent link">&para;</a></h3>
 <p><code>@StepAlias</code> can also accept an array of Strings to alias the step to multiple names.</p>
-<div class="highlight"><pre><span></span><code><span class="nd">@StepAlias</span><span class="o">([</span><span class="s2">&quot;build&quot;</span><span class="o">,</span> <span class="s2">&quot;unit_test&quot;</span><span class="o">])</span> <span class="o">[</span><span class="mi">1</span><span class="o">]</span>
+<div class="highlight"><span class="filename">generic.groovy</span><pre><span></span><code><span class="nd">@StepAlias</span><span class="o">([</span><span class="s2">&quot;build&quot;</span><span class="o">,</span> <span class="s2">&quot;unit_test&quot;</span><span class="o">])</span> <span class="o">[</span><span class="mi">1</span><span class="o">]</span>
 <span class="kt">void</span> <span class="nf">call</span><span class="o">(){</span>
     <span class="n">println</span> <span class="s2">&quot;running as either build or unit_test!&quot;</span>
 <span class="o">}</span>
@@ -1828,7 +1832,7 @@
 <p>Sometimes, aliases should themselves be determined at runtime.
 This can be accomplished by providing a <code>dynamic</code> parameter that should be a <code>Closure</code> that returns a string or list of strings.</p>
 <p>For example, if a library called <code>alias</code> had a step called <code>generic.groovy</code> then an <code>aliases</code> library parameter could be created:</p>
-<div class="highlight"><pre><span></span><code><span class="n">libraries</span><span class="o">{</span>
+<div class="highlight"><span class="filename">pipeline_config.groovy</span><pre><span></span><code><span class="n">libraries</span><span class="o">{</span>
   <span class="n">alias</span><span class="o">{</span>
     <span class="n">aliases</span> <span class="o">=</span> <span class="o">[</span><span class="s2">&quot;build&quot;</span><span class="o">,</span> <span class="s2">&quot;unit_test&quot;</span><span class="o">]</span> <span class="o">[</span><span class="mi">1</span><span class="o">]</span>
   <span class="o">}</span>
@@ -1838,7 +1842,7 @@ This can be accomplished by providing a <code>dynamic</code> parameter that shou
 <li>defines a string or list of strings to alias the <code>generic</code> step to</li>
 </ol>
 <p>This <code>aliases</code> parameter can then be consumed within the dynamic step alias closure:</p>
-<div class="highlight"><pre><span></span><code><span class="nd">@StepAlias</span><span class="o">(</span><span class="n">dynamic</span> <span class="o">=</span> <span class="o">{</span> <span class="k">return</span> <span class="n">config</span><span class="o">.</span><span class="na">aliases</span> <span class="o">})</span> <span class="o">[</span><span class="mi">1</span><span class="o">]</span>
+<div class="highlight"><span class="filename">generic.groovy</span><pre><span></span><code><span class="nd">@StepAlias</span><span class="o">(</span><span class="n">dynamic</span> <span class="o">=</span> <span class="o">{</span> <span class="k">return</span> <span class="n">config</span><span class="o">.</span><span class="na">aliases</span> <span class="o">})</span> <span class="o">[</span><span class="mi">1</span><span class="o">]</span>
 <span class="kt">void</span> <span class="nf">call</span><span class="o">(){</span>
     <span class="n">println</span> <span class="s2">&quot;running as either build or unit_test!&quot;</span>
 <span class="o">}</span>
@@ -1849,7 +1853,7 @@ This can be accomplished by providing a <code>dynamic</code> parameter that shou
 <h2 id="keeping-the-original-step">Keeping the Original Step<a class="headerlink" href="#keeping-the-original-step" title="Permanent link">&para;</a></h2>
 <p>By default, when <code>@StepAlias</code> is present in a step file, a step with the original name <strong>won't</strong> be created.</p>
 <p>This behavior can be overridden via the <code>keepOriginal</code> annotation parameter.</p>
-<div class="highlight"><pre><span></span><code><span class="nd">@StepAlias</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;build&quot;</span><span class="o">,</span> <span class="n">keepOriginal</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span> <span class="o">[</span><span class="mi">1</span><span class="o">]</span>
+<div class="highlight"><span class="filename">generic.groovy</span><pre><span></span><code><span class="nd">@StepAlias</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;build&quot;</span><span class="o">,</span> <span class="n">keepOriginal</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span> <span class="o">[</span><span class="mi">1</span><span class="o">]</span>
 <span class="kt">void</span> <span class="nf">call</span><span class="o">(){</span>
     <span class="n">println</span> <span class="s2">&quot;running as either build() or generic()&quot;</span>
 <span class="o">}</span>
@@ -1955,10 +1959,10 @@ This can be accomplished by providing a <code>dynamic</code> parameter that shou
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": {"provider": "mike", "default": "latest"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": {"provider": "mike", "default": "latest"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.f89c2efe.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b1047164.min.js"></script>
       
     
   </body>

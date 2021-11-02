@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.5143246d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a57b2b03.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -844,6 +844,8 @@
       </a>
       
         
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1713,6 +1715,8 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1783,7 +1787,7 @@
 <p>Library classes should implement the <code>Serializable</code> interface whenever possible.</p>
 <p>For example, a <code>Utility</code> class coming from an <code>example</code> library:</p>
 <!-- markdownlint-disable code-block-style-->
-<div class="highlight"><pre><span></span><code><span class="kn">package</span> <span class="n">example</span>
+<div class="highlight"><span class="filename">example.groovy</span><pre><span></span><code><span class="kn">package</span> <span class="n">example</span>
 <span class="kd">class</span> <span class="nc">Utility</span> <span class="kd">implements</span> <span class="n">Serializable</span> <span class="o">{}</span>
 </code></pre></div>
 <p>This is because Jenkins pipeline's implement a design pattern called <a href="https://github.com/jenkinsci/workflow-cps-plugin#technical-design">Continuation Passing Style (CPS)</a> so that individual Pipeline Runs can resume progress.</p>
@@ -1802,7 +1806,7 @@
 <p>Library classes can not resolve Jenkins pipeline DSL functions such as <code>sh</code> or <code>echo</code>. A work around for this is to pass the <code>steps</code> variable to the class constructor to store on a field or through a method parameter.</p>
 <p>For example, to use the <code>echo</code> pipeline step one could do the following:</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Utility Class</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="kn">package</span> <span class="n">example</span>
+<div class="highlight"><span class="filename">example.groovy</span><pre><span></span><code><span class="kn">package</span> <span class="n">example</span>
 
 <span class="kd">class</span> <span class="nc">Utility</span> <span class="kd">implements</span> <span class="n">Serializable</span><span class="o">{</span>
   <span class="kt">void</span> <span class="n">doThing</span><span class="o">(</span><span class="n">steps</span><span class="o">){</span>
@@ -1812,7 +1816,7 @@
 </code></pre></div>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Library Step</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">example.Utility</span>
+<div class="highlight"><span class="filename">echo_example.groovy</span><pre><span></span><code><span class="kn">import</span> <span class="nn">example.Utility</span>
 
 <span class="kt">void</span> <span class="nf">call</span><span class="o">(){</span>
   <span class="n">Utility</span> <span class="n">u</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Utility</span><span class="o">()</span>
@@ -1825,7 +1829,7 @@
 <p>Unlike with library steps, the <code>config</code> and <code>pipelineConfig</code> variables aren't autowired to library classes.</p>
 <p>To access these variables, they can be passed to the class through constructor or method parameters.</p>
 <div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Utility Class</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="kn">package</span> <span class="n">example</span>
+<div class="highlight"><span class="filename">example.groovy</span><pre><span></span><code><span class="kn">package</span> <span class="n">example</span>
 
 <span class="kd">class</span> <span class="nc">Utility</span> <span class="kd">implements</span> <span class="n">Serializable</span><span class="o">{</span>
   <span class="kt">def</span> <span class="n">config</span>
@@ -1840,7 +1844,7 @@
 </code></pre></div>
 </div>
 <input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Library Step</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">example.Utility</span>
+<div class="highlight"><span class="filename">get_config.groovy</span><pre><span></span><code><span class="kn">import</span> <span class="nn">example.Utility</span>
 
 <span class="kt">void</span> <span class="nf">call</span><span class="o">(){</span>
   <span class="n">Utility</span> <span class="n">u</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Utility</span><span class="o">(</span><span class="n">config</span><span class="o">)</span>
@@ -1943,10 +1947,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": {"provider": "mike", "default": "latest"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": {"provider": "mike", "default": "latest"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.f89c2efe.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b1047164.min.js"></script>
       
     
   </body>

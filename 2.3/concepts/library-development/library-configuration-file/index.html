@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.5143246d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a57b2b03.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -872,6 +872,8 @@
       </a>
       
         
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1699,6 +1701,8 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1752,10 +1756,10 @@
 <p>A comprehensive overview of the <a href="../../../reference/library-configuration-schema/">library configuration schema</a> can be found in the Reference section.</p>
 </div>
 <h2 id="advanced-library-validations">Advanced Library Validations<a class="headerlink" href="#advanced-library-validations" title="Permanent link">&para;</a></h2>
-<p>For library parameter validations that more complex than what can be accomplished through the library configuration functionality, library developers can alternatively create a step annotated with the <a href="../lifecycle-hooks/"><code>@Validate</code> Lifecycle Hook</a>.</p>
+<p>For library parameter validations that are more complex than what can be accomplished through the library configuration functionality, library developers can alternatively create a step annotated with the <a href="../lifecycle-hooks/"><code>@Validate</code> Lifecycle Hook</a>.</p>
 <p>Methods within steps annotated with <code>@Validate</code> will execute before the Pipeline Template.</p>
 <p>For example, if a library wanted to validate a more complex use case such as ensuring a library parameter named <code>threshold</code> was greater than or equal to zero but less than or equal to 100 the following could be implemented:</p>
-<div class="highlight"><pre><span></span><code><span class="nd">@Validate</span> <span class="o">[</span><span class="mi">1</span><span class="o">]</span>
+<div class="highlight"><span class="filename">threshold_check.groovy</span><pre><span></span><code><span class="nd">@Validate</span> <span class="o">[</span><span class="mi">1</span><span class="o">]</span>
 <span class="kt">void</span> <span class="nf">call</span><span class="o">(</span><span class="n">context</span><span class="o">){</span> <span class="o">[</span><span class="mi">2</span><span class="o">]</span>
   <span class="k">if</span><span class="o">(</span><span class="n">config</span><span class="o">.</span><span class="na">threshold</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">config</span><span class="o">.</span><span class="na">threshold</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="o">){</span> <span class="o">[</span><span class="mi">3</span><span class="o">]</span>
     <span class="n">error</span> <span class="s2">&quot;Library parameter &#39;threshold&#39; must be within the range of: 0 &lt;= threshold &lt;= 100&quot;</span> <span class="o">[</span><span class="mi">4</span><span class="o">]</span>
@@ -1869,10 +1873,10 @@ This could be also be validated using Groovy or by combining the functionality o
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": {"provider": "mike", "default": "latest"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": {"provider": "mike", "default": "latest"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.f89c2efe.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b1047164.min.js"></script>
       
     
   </body>

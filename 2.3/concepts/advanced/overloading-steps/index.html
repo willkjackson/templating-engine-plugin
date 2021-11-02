@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.5143246d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a57b2b03.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -1096,6 +1096,8 @@
       </a>
       
         
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1699,6 +1701,8 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1753,7 +1757,7 @@ Instead, overloaded steps must be accessed using the <a href="../../pipeline-pri
 <p class="admonition-title">Overloaded Library Steps</p>
 <p>The following example assumes a <code>gradle</code> and <code>npm</code> library are available that both contribute a <code>build()</code> step.</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Pipeline Configuration</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="n">jte</span><span class="o">{</span>
+<div class="highlight"><span class="filename">pipeline_config.groovy</span><pre><span></span><code><span class="n">jte</span><span class="o">{</span>
   <span class="n">permissive_initialization</span> <span class="o">=</span> <span class="kc">true</span> <span class="c1">// pipeline will fail if not set</span>
 <span class="o">}</span>
 <span class="n">libraries</span><span class="o">{</span>
@@ -1763,7 +1767,7 @@ Instead, overloaded steps must be accessed using the <a href="../../pipeline-pri
 </code></pre></div>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Pipeline Template</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="c1">// build() &lt;-- would fail because step is overloaded</span>
+<div class="highlight"><span class="filename">Jenkinsfile</span><pre><span></span><code><span class="c1">// build() &lt;-- would fail because step is overloaded</span>
 <span class="n">jte</span><span class="o">.</span><span class="na">libraries</span><span class="o">.</span><span class="na">npm</span><span class="o">.</span><span class="na">build</span><span class="o">()</span> 
 <span class="n">jte</span><span class="o">.</span><span class="na">libraries</span><span class="o">.</span><span class="na">gradle</span><span class="o">.</span><span class="na">build</span><span class="o">()</span>
 </code></pre></div>
@@ -1789,7 +1793,7 @@ Check out the <a href="../../pipeline-templates/declarative-syntax/#step-resolut
 <p>If a library were to contribute a Library Step called <code>node</code>, then it would override the <code>node</code> step used in Jenkins Scripted Pipelines.</p>
 <p>The following example shows how to override the default <code>node</code> step to augment its functionality.</p>
 <div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1"><code>node.groovy</code></label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="c1">// support the original node interface</span>
+<div class="highlight"><span class="filename">node.groovy</span><pre><span></span><code><span class="c1">// support the original node interface</span>
 <span class="kt">void</span> <span class="nf">call</span><span class="o">(</span><span class="n">String</span> <span class="n">label</span> <span class="o">=</span> <span class="kc">null</span><span class="o">,</span> <span class="n">Closure</span> <span class="n">body</span><span class="o">){</span>
     <span class="k">if</span><span class="o">(</span><span class="n">label</span><span class="o">){</span>
       <span class="n">steps</span><span class="o">.</span><span class="na">node</span><span class="o">(</span><span class="n">label</span><span class="o">,</span> <span class="n">body</span><span class="o">)</span> <span class="c1">// steps var used to access original &quot;node&quot; implementation</span>
@@ -1807,7 +1811,7 @@ Check out the <a href="../../pipeline-templates/declarative-syntax/#step-resolut
 </code></pre></div>
 </div>
 <input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Pipeline Template</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="c1">// assume the Pipeline Configuration loaded the library contributing node.groovy</span>
+<div class="highlight"><span class="filename">Jenkinsfile</span><pre><span></span><code><span class="c1">// assume the Pipeline Configuration loaded the library contributing node.groovy</span>
 <span class="n">node</span><span class="o">{</span> <span class="n">println</span> <span class="s2">&quot;hi&quot;</span> <span class="o">}</span>
 <span class="n">node</span><span class="o">(</span><span class="s2">&quot;my-label&quot;</span><span class="o">){</span> <span class="n">println</span> <span class="s2">&quot;hi&quot;</span> <span class="o">}</span>
 <span class="n">node</span><span class="o">(</span><span class="nl">container:</span> <span class="s2">&quot;maven&quot;</span><span class="o">){</span> <span class="n">sh</span> <span class="s2">&quot;mvn -v&quot;</span> <span class="o">}</span> <span class="c1">// custom functionality</span>
@@ -1917,10 +1921,10 @@ Check out the <a href="../../pipeline-templates/declarative-syntax/#step-resolut
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": {"provider": "mike", "default": "latest"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": {"provider": "mike", "default": "latest"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.f89c2efe.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b1047164.min.js"></script>
       
     
   </body>
