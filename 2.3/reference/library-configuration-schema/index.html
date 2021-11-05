@@ -1857,9 +1857,9 @@
 <!-- markdownlint-disable -->
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If a library doesn't include a library configuration file, then users can supply arbitrary parameters to the library from the Pipeline Configuration.</p>
-<p>If a library does include a library configuration file, then users will only be able to supply parameters that are listed within the <code>required</code> and <code>optional</code> blocks.
-The presence of extraneous parameters will fail the build. </p>
+<p>If a library <strong>doesn't</strong> include a library configuration file, then users can supply arbitrary parameters to the library from the Pipeline Configuration.</p>
+<p>If a library <strong>does</strong> include a library configuration file, then users will only be able to supply parameters that are listed within the <code>required</code> and <code>optional</code> blocks.
+The presence of extraneous parameters will fail the build.</p>
 </div>
 <!-- markdownlint-restore -->
 
@@ -1869,13 +1869,15 @@ The presence of extraneous parameters will fail the build. </p>
 <p>Type validation confirms that a library parameter is an instance of a particular type.</p>
 <p>The current options for data types to test for are:</p>
 <ul>
-<li>boolean / Boolean</li>
+<li>Boolean / boolean</li>
 <li>String</li>
 <li>Integer / int</li>
 <li>Double</li>
 <li>BigDecimal</li>
 <li>Float</li>
 <li>Number</li>
+<li>List</li>
+<li>ArrayList</li>
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Type Validation Example</p>
@@ -1889,6 +1891,8 @@ The presence of extraneous parameters will fail the build. </p>
   <span class="n">optional</span><span class="o">{</span>
     <span class="n">parameterD</span> <span class="o">=</span> <span class="n">String</span> <span class="o">[</span><span class="mi">4</span><span class="o">]</span>
     <span class="n">parameterE</span> <span class="o">=</span> <span class="n">Boolean</span> <span class="o">[</span><span class="mi">5</span><span class="o">]</span>
+    <span class="n">parameterF</span> <span class="o">=</span> <span class="n">List</span> <span class="o">[</span><span class="mi">6</span><span class="o">]</span>
+    <span class="n">parameterG</span> <span class="o">=</span> <span class="n">ArrayList</span> <span class="o">[</span><span class="mi">7</span><span class="o">]</span>
   <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div>
@@ -1898,12 +1902,14 @@ The presence of extraneous parameters will fail the build. </p>
 <li>ensures that <code>parameterA</code> was configured and is an instance of a String</li>
 <li>ensures that <code>parameterB</code> was configured and is an instance of a Number</li>
 <li>ensures that <code>parameterC</code> was configured and is an instance of a Boolean</li>
+<li><em>if</em><code>parameterD</code> was configured, ensures it's a String</li>
+<li><em>if</em><code>parameterE</code> was configured, ensures it's a Boolean</li>
+<li><em>if</em> <code>parameterF</code> was configured, ensures it's a List</li>
+<li><em>if</em> <code>parameterG</code> was configured, ensures it's an ArrayList</li>
 </ol>
 </div>
-<p>4.<em>if</em><code>parameterD</code> was configured, ensures it's a String
-5.<em>if</em> <code>parameterE</code> was configured, ensures it's a Boolean</p>
 <h4 id="enum-validation">Enum Validation<a class="headerlink" href="#enum-validation" title="Permanent link">&para;</a></h4>
-<p>The enum validation ensures that a library parameter value is one of the options defined by a list in the library configuration.</p>
+<p>Enum validation ensures that a library parameter value is one of the options defined by a list in the library configuration.</p>
 <div class="admonition example">
 <p class="admonition-title">Enum Validation Example</p>
 <div class="tabbed-set" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Library Configuration File</label><div class="tabbed-content">
