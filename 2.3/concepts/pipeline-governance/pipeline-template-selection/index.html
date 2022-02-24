@@ -1817,7 +1817,7 @@ If not, JTE will follow the flow described throughout the rest of this document.
 <p>The rationale for using the configured template without falling back to the rest of the Pipeline Template Selection process is that if a user has permissions to create and configure their own Jenkins job, Pipeline Governance is already gone.</p>
 </div>
 <h3 id="multibranch-project-pipeline-jobs">MultiBranch Project Pipeline Jobs<a class="headerlink" href="#multibranch-project-pipeline-jobs" title="Permanent link">&para;</a></h3>
-<p>For MultiBranch Project Pipeline Jobs, if the source code repository has a <code>Jenkinsfile</code> at the root <strong>and</strong> <code>jte.allow_scm_jenkinsfile</code> is set to <code>True</code>, then the repository <code>Jenkinsfile</code> will be used as the Pipeline Template.</p>
+<p>For MultiBranch Project Pipeline Jobs, if the source code repository has a <code>Jenkinsfile</code> at the root (or at any arbitrary path in the repository as configured by <code>scriptPath</code>) <strong>and</strong> <code>jte.allow_scm_jenkinsfile</code> is set to <code>True</code>, then the repository <code>Jenkinsfile</code> will be used as the Pipeline Template.</p>
 <div class="admonition important">
 <p class="admonition-title">Disabling Repository Jenkinsfiles</p>
 <p>It's important that when trying to enforce a certain set of Pipeline Templates are used that <code>jte.allow_scm_jenkinsfile</code> is set to <code>False</code>.
