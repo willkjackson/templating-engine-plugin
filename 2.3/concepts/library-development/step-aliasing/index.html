@@ -943,6 +943,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#static-step-aliases" class="md-nav__link">
     Static Step Aliases
   </a>
@@ -1742,6 +1749,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#static-step-aliases" class="md-nav__link">
     Static Step Aliases
   </a>
@@ -1802,8 +1816,12 @@
 <h1 id="step-aliasing">Step Aliasing<a class="headerlink" href="#step-aliasing" title="Permanent link">&para;</a></h1>
 <p>Step Aliasing allows library developers to cast the same step to one or more step names at runtime by using the <code>@StepAlias</code> annotation.</p>
 <p>By default, steps will assume the basename of the files that define them. i.e, a <code>build.groovy</code> step file will create a <code>build</code> step.</p>
-<p>Step Aliasing, allows you to change the name (or names) of the step that's going to be created.</p>
+<p>Step Aliasing allows you to change the name (or names) of the step that's going to be created.</p>
 <p>This annotation is automatically imported, just like <a href="../lifecycle-hooks/">lifecycle hooks</a>.</p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The use case often arises where a library has multiple steps that are all essentially the same thing.</p>
+<p>Step Aliases allow you to write a step one time and invoke it using multiple names.</p>
+<p>Steps have access to a <a href="/reference/autowired-variables#stepcontext"><code>stepContext</code> variable</a> to determine the current context of the step, such as the name being used and whether or not the step is an alias.</p>
 <h2 id="static-step-aliases">Static Step Aliases<a class="headerlink" href="#static-step-aliases" title="Permanent link">&para;</a></h2>
 <p>Static step aliases are static lists of strings to cast the step to at runtime.</p>
 <h3 id="single-static-alias">Single Static Alias<a class="headerlink" href="#single-static-alias" title="Permanent link">&para;</a></h3>
@@ -1842,7 +1860,7 @@ This can be accomplished by providing a <code>dynamic</code> parameter that shou
 <p>This <code>aliases</code> parameter can then be consumed within the dynamic step alias closure:</p>
 <div class="highlight"><span class="filename">generic.groovy</span><pre><span></span><code><span class="nd">@StepAlias</span><span class="o">(</span><span class="n">dynamic</span> <span class="o">=</span> <span class="o">{</span> <span class="k">return</span> <span class="n">config</span><span class="o">.</span><span class="na">aliases</span> <span class="o">})</span> <span class="c1">// (1)</span>
 <span class="kt">void</span> <span class="nf">call</span><span class="o">(){</span>
-    <span class="n">println</span> <span class="s2">&quot;running as either build or unit_test!&quot;</span>
+    <span class="n">println</span> <span class="s2">&quot;running as ${stepContext.name}!&quot;</span>
 <span class="o">}</span>
 </code></pre></div>
 <ol>
