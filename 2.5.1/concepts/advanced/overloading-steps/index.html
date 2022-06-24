@@ -2240,7 +2240,7 @@
 <p>Function Overloading<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> is when there are multiple methods with the same name and different implementation.</p>
 <h2 id="conflicting-library-steps">Conflicting Library Steps<a class="headerlink" href="#conflicting-library-steps" title="Permanent link">&para;</a></h2>
 <p>To allow multiple libraries to contribute the same step, the <a href="../../pipeline-configuration/">Pipeline Configuration</a> must have <code>jte.permissive_initialization</code> set to true.</p>
-<p>If multiple libraries <em>do</em> contribute the same step, the step will no longer be able to be invoked by its short_name.
+<p>If multiple libraries <em>do</em> contribute the same step, the step will no longer be able to be invoked by its <code>short_name</code>.
 Instead, overloaded steps must be accessed using the <a href="../../pipeline-primitives/primitive-namespace/">Pipeline Primitive Namespace</a>.</p>
 <div class="admonition example">
 <p class="admonition-title">Overloaded Library Steps</p>

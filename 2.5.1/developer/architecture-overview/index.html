@@ -2151,8 +2151,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pipeline-initialization_1" class="md-nav__link">
-    Pipeline Initialization
+  <a href="#pipeline-initialization-phases" class="md-nav__link">
+    Pipeline Initialization Phases
   </a>
   
 </li>
@@ -2191,7 +2191,7 @@
 <p>When a pipeline kicks off, a <a href="https://github.com/jenkinsci/workflow-job-plugin/blob/master/src/main/java/org/jenkinsci/plugins/workflow/job/WorkflowRun.java"><code>WorkflowRun</code></a> is created and eventually the <code>run()</code> method is called.
 The <code>run()</code> method fetches the job's <code>FlowDefinition</code> and invokes <code>create()</code> to return a <code>FlowExecution</code>.</p>
 <p>JTE's <code>TemplateFlowDefinition.create()</code> is where Pipeline Initialization is performed.</p>
-<h2 id="pipeline-initialization_1">Pipeline Initialization<a class="headerlink" href="#pipeline-initialization_1" title="Permanent link">&para;</a></h2>
+<h2 id="pipeline-initialization-phases">Pipeline Initialization Phases<a class="headerlink" href="#pipeline-initialization-phases" title="Permanent link">&para;</a></h2>
 <p>The steps JTE performs before the pipeline starts is referred to as <strong>Pipeline Initialization</strong>.</p>
 <table>
 <thead>
