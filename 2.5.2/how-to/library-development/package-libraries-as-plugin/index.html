@@ -8,19 +8,19 @@
       
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
     
     
       
-        <title>Pipeline Initialization - Jenkins Templating Engine</title>
+        <title>Package a Library Source as a Plugin - Jenkins Templating Engine</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.c382b1dc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.c382b1dc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cc9b2e1e.min.css">
         
           
           
@@ -39,9 +39,9 @@
       
     
     
-      <link rel="stylesheet" href="../../css/extra.css">
+      <link rel="stylesheet" href="../../../css/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pipeline-initialization" class="md-skip">
+        <a href="#package-a-library-source-as-a-plugin" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Jenkins Templating Engine" class="md-header__button md-logo" aria-label="Jenkins Templating Engine" data-md-component="logo">
+    <a href="../../.." title="Jenkins Templating Engine" class="md-header__button md-logo" aria-label="Jenkins Templating Engine" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pipeline Initialization
+              Package a Library Source as a Plugin
             
           </span>
         </div>
@@ -186,7 +186,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../.." class="md-tabs__link">
+    <a href="../../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -206,7 +206,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../concepts/framework-overview/" class="md-tabs__link">
+      <a href="../../../concepts/framework-overview/" class="md-tabs__link">
         Concepts
       </a>
     </li>
@@ -224,7 +224,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../reference/overview/" class="md-tabs__link">
+      <a href="../../../reference/overview/" class="md-tabs__link">
         Reference
       </a>
     </li>
@@ -240,7 +240,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../tutorials/overview/" class="md-tabs__link">
+      <a href="../../../tutorials/overview/" class="md-tabs__link">
         Tutorials
       </a>
     </li>
@@ -250,13 +250,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../how-to/overview/" class="md-tabs__link">
+      <a href="../../overview/" class="md-tabs__link md-tabs__link--active">
         How-To Guides
       </a>
     </li>
@@ -272,7 +274,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../contributing/fork-based/" class="md-tabs__link">
+      <a href="../../../contributing/fork-based/" class="md-tabs__link">
         Contributing
       </a>
     </li>
@@ -288,7 +290,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link">
+      <a href="../../../developer/" class="md-tabs__link">
         Developer Docs
       </a>
     </li>
@@ -316,7 +318,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Jenkins Templating Engine" class="md-nav__button md-logo" aria-label="Jenkins Templating Engine" data-md-component="logo">
+    <a href="../../.." title="Jenkins Templating Engine" class="md-nav__button md-logo" aria-label="Jenkins Templating Engine" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -347,7 +349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -429,7 +431,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../concepts/framework-overview/">Framework Overview</a>
+          <a href="../../../concepts/framework-overview/">Framework Overview</a>
           
             <label for="__nav_2_1">
               <span class="md-nav__icon md-icon"></span>
@@ -452,7 +454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/framework-overview/bottom-up/" class="md-nav__link">
+      <a href="../../../concepts/framework-overview/bottom-up/" class="md-nav__link">
         Bottom-Up Explanation
       </a>
     </li>
@@ -466,7 +468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/framework-overview/top-down/" class="md-nav__link">
+      <a href="../../../concepts/framework-overview/top-down/" class="md-nav__link">
         Top-Down Explanation
       </a>
     </li>
@@ -480,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/framework-overview/key-benefits/" class="md-nav__link">
+      <a href="../../../concepts/framework-overview/key-benefits/" class="md-nav__link">
         Key Benefits
       </a>
     </li>
@@ -524,7 +526,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../concepts/pipeline-templates/">Pipeline Templates</a>
+          <a href="../../../concepts/pipeline-templates/">Pipeline Templates</a>
           
             <label for="__nav_2_2">
               <span class="md-nav__icon md-icon"></span>
@@ -547,7 +549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/pipeline-templates/pipeline-catalog/" class="md-nav__link">
+      <a href="../../../concepts/pipeline-templates/pipeline-catalog/" class="md-nav__link">
         Pipeline Catalog
       </a>
     </li>
@@ -561,7 +563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/pipeline-templates/declarative-syntax/" class="md-nav__link">
+      <a href="../../../concepts/pipeline-templates/declarative-syntax/" class="md-nav__link">
         Declarative Syntax Support
       </a>
     </li>
@@ -605,7 +607,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../concepts/pipeline-configuration/">Pipeline Configuration</a>
+          <a href="../../../concepts/pipeline-configuration/">Pipeline Configuration</a>
           
             <label for="__nav_2_3">
               <span class="md-nav__icon md-icon"></span>
@@ -628,7 +630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/pipeline-configuration/configuration-dsl/" class="md-nav__link">
+      <a href="../../../concepts/pipeline-configuration/configuration-dsl/" class="md-nav__link">
         Pipeline Configuration Syntax
       </a>
     </li>
@@ -642,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/pipeline-configuration/merging-configs/" class="md-nav__link">
+      <a href="../../../concepts/pipeline-configuration/merging-configs/" class="md-nav__link">
         Merging Configuration Files
       </a>
     </li>
@@ -692,7 +694,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../concepts/pipeline-primitives/">Pipeline Primitives</a>
+          <a href="../../../concepts/pipeline-primitives/">Pipeline Primitives</a>
           
             <label for="__nav_2_4">
               <span class="md-nav__icon md-icon"></span>
@@ -715,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/pipeline-primitives/steps/" class="md-nav__link">
+      <a href="../../../concepts/pipeline-primitives/steps/" class="md-nav__link">
         Steps
       </a>
     </li>
@@ -729,7 +731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/pipeline-primitives/stages/" class="md-nav__link">
+      <a href="../../../concepts/pipeline-primitives/stages/" class="md-nav__link">
         Stages
       </a>
     </li>
@@ -743,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/pipeline-primitives/application-environments/" class="md-nav__link">
+      <a href="../../../concepts/pipeline-primitives/application-environments/" class="md-nav__link">
         Application Environments
       </a>
     </li>
@@ -757,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/pipeline-primitives/keywords/" class="md-nav__link">
+      <a href="../../../concepts/pipeline-primitives/keywords/" class="md-nav__link">
         Keywords
       </a>
     </li>
@@ -771,7 +773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/pipeline-primitives/primitive-namespace/" class="md-nav__link">
+      <a href="../../../concepts/pipeline-primitives/primitive-namespace/" class="md-nav__link">
         Primitive Namespace
       </a>
     </li>
@@ -831,7 +833,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../concepts/library-development/">Library Development</a>
+          <a href="../../../concepts/library-development/">Library Development</a>
           
             <label for="__nav_2_5">
               <span class="md-nav__icon md-icon"></span>
@@ -854,7 +856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/library-development/library-structure/" class="md-nav__link">
+      <a href="../../../concepts/library-development/library-structure/" class="md-nav__link">
         Library Structure
       </a>
     </li>
@@ -868,7 +870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/library-development/library-steps/" class="md-nav__link">
+      <a href="../../../concepts/library-development/library-steps/" class="md-nav__link">
         Library Steps
       </a>
     </li>
@@ -882,7 +884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/library-development/library-resources/" class="md-nav__link">
+      <a href="../../../concepts/library-development/library-resources/" class="md-nav__link">
         Library Resources
       </a>
     </li>
@@ -896,7 +898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/library-development/library-classes/" class="md-nav__link">
+      <a href="../../../concepts/library-development/library-classes/" class="md-nav__link">
         Library Classes
       </a>
     </li>
@@ -910,7 +912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/library-development/parameterizing-libraries/" class="md-nav__link">
+      <a href="../../../concepts/library-development/parameterizing-libraries/" class="md-nav__link">
         Parameterizing Libraries
       </a>
     </li>
@@ -924,7 +926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/library-development/library-configuration-file/" class="md-nav__link">
+      <a href="../../../concepts/library-development/library-configuration-file/" class="md-nav__link">
         Library Configuration File
       </a>
     </li>
@@ -938,7 +940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/library-development/library-source/" class="md-nav__link">
+      <a href="../../../concepts/library-development/library-source/" class="md-nav__link">
         Library Source
       </a>
     </li>
@@ -952,7 +954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/library-development/lifecycle-hooks/" class="md-nav__link">
+      <a href="../../../concepts/library-development/lifecycle-hooks/" class="md-nav__link">
         Lifecycle Hooks
       </a>
     </li>
@@ -966,7 +968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/library-development/multi-method-steps/" class="md-nav__link">
+      <a href="../../../concepts/library-development/multi-method-steps/" class="md-nav__link">
         Multi-Method Library Steps
       </a>
     </li>
@@ -980,7 +982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/library-development/step-aliasing/" class="md-nav__link">
+      <a href="../../../concepts/library-development/step-aliasing/" class="md-nav__link">
         Step Aliasing
       </a>
     </li>
@@ -1028,7 +1030,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../concepts/pipeline-governance/">Pipeline Governance</a>
+          <a href="../../../concepts/pipeline-governance/">Pipeline Governance</a>
           
             <label for="__nav_2_6">
               <span class="md-nav__icon md-icon"></span>
@@ -1051,7 +1053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/pipeline-governance/configuration-hierarchy/" class="md-nav__link">
+      <a href="../../../concepts/pipeline-governance/configuration-hierarchy/" class="md-nav__link">
         Configuration Hierarchy
       </a>
     </li>
@@ -1065,7 +1067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/pipeline-governance/governance-tier/" class="md-nav__link">
+      <a href="../../../concepts/pipeline-governance/governance-tier/" class="md-nav__link">
         Governance Tier
       </a>
     </li>
@@ -1079,7 +1081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/pipeline-governance/pipeline-template-selection/" class="md-nav__link">
+      <a href="../../../concepts/pipeline-governance/pipeline-template-selection/" class="md-nav__link">
         Pipeline Template Selection
       </a>
     </li>
@@ -1093,7 +1095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/pipeline-governance/library-resolution/" class="md-nav__link">
+      <a href="../../../concepts/pipeline-governance/library-resolution/" class="md-nav__link">
         Library Resolution
       </a>
     </li>
@@ -1148,7 +1150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/advanced/pipeline-initialization/" class="md-nav__link">
+      <a href="../../../concepts/advanced/pipeline-initialization/" class="md-nav__link">
         Pipeline Initialization
       </a>
     </li>
@@ -1162,7 +1164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/advanced/overloading-steps/" class="md-nav__link">
+      <a href="../../../concepts/advanced/overloading-steps/" class="md-nav__link">
         Overloading Steps
       </a>
     </li>
@@ -1229,7 +1231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/overview/" class="md-nav__link">
+      <a href="../../../reference/overview/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1243,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/pipeline-configuration-schema/" class="md-nav__link">
+      <a href="../../../reference/pipeline-configuration-schema/" class="md-nav__link">
         Pipeline Configuration Schema
       </a>
     </li>
@@ -1257,7 +1259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/autowired-variables/" class="md-nav__link">
+      <a href="../../../reference/autowired-variables/" class="md-nav__link">
         Autowired Variables
       </a>
     </li>
@@ -1271,7 +1273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/library-configuration-schema/" class="md-nav__link">
+      <a href="../../../reference/library-configuration-schema/" class="md-nav__link">
         Library Configuration Schema
       </a>
     </li>
@@ -1285,7 +1287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/governance-tier/" class="md-nav__link">
+      <a href="../../../reference/governance-tier/" class="md-nav__link">
         Governance Tier
       </a>
     </li>
@@ -1337,7 +1339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/overview/" class="md-nav__link">
+      <a href="../../../tutorials/overview/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1357,12 +1359,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
@@ -1393,7 +1397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to/overview/" class="md-nav__link">
+      <a href="../../overview/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1405,14 +1409,16 @@
               
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" checked>
       
       
       
@@ -1441,7 +1447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to/library-development/lifecycle-hooks-on-failure/" class="md-nav__link">
+      <a href="../lifecycle-hooks-on-failure/" class="md-nav__link">
         Trigger Lifecycle Hooks On Failure
       </a>
     </li>
@@ -1453,11 +1459,52 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../how-to/library-development/package-libraries-as-plugin/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Package a Library Source as a Plugin
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Package a Library Source as a Plugin
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gradle-jte-plugin" class="md-nav__link">
+    Gradle JTE Plugin
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1495,7 +1542,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../how-to/upgrade-2.0/">Upgrade Guides</a>
+          <a href="../../upgrade-2.0/">Upgrade Guides</a>
           
         </div>
       
@@ -1563,7 +1610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/fork-based/" class="md-nav__link">
+      <a href="../../../contributing/fork-based/" class="md-nav__link">
         Fork-Based Contribution Model
       </a>
     </li>
@@ -1615,7 +1662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/linting/" class="md-nav__link">
+      <a href="../../../contributing/linting/" class="md-nav__link">
         Linting
       </a>
     </li>
@@ -1629,7 +1676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/running-tests/" class="md-nav__link">
+      <a href="../../../contributing/running-tests/" class="md-nav__link">
         Running Tests
       </a>
     </li>
@@ -1643,7 +1690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/building/" class="md-nav__link">
+      <a href="../../../contributing/building/" class="md-nav__link">
         Building the Plugin
       </a>
     </li>
@@ -1657,7 +1704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/releasing/" class="md-nav__link">
+      <a href="../../../contributing/releasing/" class="md-nav__link">
         Publishing A Release
       </a>
     </li>
@@ -1724,7 +1771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/docs/getting-started/" class="md-nav__link">
+      <a href="../../../contributing/docs/getting-started/" class="md-nav__link">
         Getting Started
       </a>
     </li>
@@ -1738,7 +1785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/docs/documentation-structure/" class="md-nav__link">
+      <a href="../../../contributing/docs/documentation-structure/" class="md-nav__link">
         Documentation Structure
       </a>
     </li>
@@ -1752,7 +1799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/docs/local-development/" class="md-nav__link">
+      <a href="../../../contributing/docs/local-development/" class="md-nav__link">
         Local Development
       </a>
     </li>
@@ -1766,7 +1813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/docs/markdown-lint/" class="md-nav__link">
+      <a href="../../../contributing/docs/markdown-lint/" class="md-nav__link">
         Markdownlint
       </a>
     </li>
@@ -1780,7 +1827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/docs/vale/" class="md-nav__link">
+      <a href="../../../contributing/docs/vale/" class="md-nav__link">
         Prose Linting with Vale
       </a>
     </li>
@@ -1794,7 +1841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/docs/add-or-remove-pages/" class="md-nav__link">
+      <a href="../../../contributing/docs/add-or-remove-pages/" class="md-nav__link">
         Add or Remove Pages
       </a>
     </li>
@@ -1808,7 +1855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/docs/acronyms/" class="md-nav__link">
+      <a href="../../../contributing/docs/acronyms/" class="md-nav__link">
         On Acronyms
       </a>
     </li>
@@ -1822,7 +1869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/docs/markdown-cheatsheet/" class="md-nav__link">
+      <a href="../../../contributing/docs/markdown-cheatsheet/" class="md-nav__link">
         Markdown Cheatsheet
       </a>
     </li>
@@ -1874,7 +1921,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">Developer Docs</a>
+          <a href="../../../developer/">Developer Docs</a>
           
             <label for="__nav_7">
               <span class="md-nav__icon md-icon"></span>
@@ -1922,7 +1969,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../pipeline-initialization/">Pipeline Initialization</a>
+          <a href="../../../developer/pipeline-initialization/">Pipeline Initialization</a>
           
             <label for="__nav_7_2">
               <span class="md-nav__icon md-icon"></span>
@@ -1945,7 +1992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pipeline-initialization/aggregate-configs/" class="md-nav__link">
+      <a href="../../../developer/pipeline-initialization/aggregate-configs/" class="md-nav__link">
         Aggregating Pipeline Configuration
       </a>
     </li>
@@ -1959,7 +2006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pipeline-initialization/determine-template/" class="md-nav__link">
+      <a href="../../../developer/pipeline-initialization/determine-template/" class="md-nav__link">
         Determining the Pipeline Template
       </a>
     </li>
@@ -1973,7 +2020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pipeline-initialization/inject-primitives/" class="md-nav__link">
+      <a href="../../../developer/pipeline-initialization/inject-primitives/" class="md-nav__link">
         Inject Pipeline Primitives
       </a>
     </li>
@@ -2017,7 +2064,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../jenkins-config/">Jenkins Configurations</a>
+          <a href="../../../developer/jenkins-config/">Jenkins Configurations</a>
           
             <label for="__nav_7_3">
               <span class="md-nav__icon md-icon"></span>
@@ -2040,7 +2087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../jenkins-config/job-types/" class="md-nav__link">
+      <a href="../../../developer/jenkins-config/job-types/" class="md-nav__link">
         Job Types
       </a>
     </li>
@@ -2054,7 +2101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../jenkins-config/governance-tiers/" class="md-nav__link">
+      <a href="../../../developer/jenkins-config/governance-tiers/" class="md-nav__link">
         Governance Tiers
       </a>
     </li>
@@ -2096,7 +2143,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../testing/">Testing</a>
+          <a href="../../../developer/testing/">Testing</a>
           
             <label for="__nav_7_4">
               <span class="md-nav__icon md-icon"></span>
@@ -2119,7 +2166,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../testing/local-jenkins/" class="md-nav__link">
+      <a href="../../../developer/testing/local-jenkins/" class="md-nav__link">
         Running A Local Jenkins
       </a>
     </li>
@@ -2167,8 +2214,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pipeline-initialization-phases" class="md-nav__link">
-    Pipeline Initialization Phases
+  <a href="#gradle-jte-plugin" class="md-nav__link">
+    Gradle JTE Plugin
   </a>
   
 </li>
@@ -2185,53 +2232,34 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/jenkinsci/templating-engine-plugin/edit/main/docs/developer/architecture-overview.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/jenkinsci/templating-engine-plugin/edit/main/docs/how-to/library-development/package-libraries-as-plugin.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="pipeline-initialization">Pipeline Initialization<a class="headerlink" href="#pipeline-initialization" title="Permanent link">&para;</a></h1>
-<pre class="mermaid"><code>flowchart TD
-    subgraph External to JTE
-    WorkflowRun
-    end
-    subgraph JTE
-    WorkflowRun--&gt;|create|TemplateFlowDefinition
-    TemplateFlowDefinition--&gt;PipelineConfigurationAggregator
-    TemplateFlowDefinition--&gt;PipelineTemplateResolver
-    TemplateFlowDefinition--&gt;TemplatePrimitiveInjector
-    end</code></pre>
-<p>Often, knowing which file to start with can be the biggest hurdle to understanding a new codebase.</p>
-<p>In JTE, the class that kicks everything off is <code>TemplateFlowDefinition</code>.</p>
-<p>When a pipeline kicks off, a <a href="https://github.com/jenkinsci/workflow-job-plugin/blob/master/src/main/java/org/jenkinsci/plugins/workflow/job/WorkflowRun.java"><code>WorkflowRun</code></a> is created and eventually the <code>run()</code> method is called.
-The <code>run()</code> method fetches the job's <code>FlowDefinition</code> and invokes <code>create()</code> to return a <code>FlowExecution</code>.</p>
-<p>JTE's <code>TemplateFlowDefinition.create()</code> is where Pipeline Initialization is performed.</p>
-<h2 id="pipeline-initialization-phases">Pipeline Initialization Phases<a class="headerlink" href="#pipeline-initialization-phases" title="Permanent link">&para;</a></h2>
-<p>The steps JTE performs before the pipeline starts is referred to as <strong>Pipeline Initialization</strong>.</p>
-<table>
-<thead>
-<tr>
-<th>Pipeline Initialization Stage</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../pipeline-initialization/aggregate-configs/">Aggregate Pipeline Configurations</a></td>
-<td>Fetches the run's Pipeline Configuration files, parses them, and then merges them to create the Aggregated Pipeline Configuration</td>
-</tr>
-<tr>
-<td><a href="../pipeline-initialization/determine-template/">Determine the Pipeline Template</a></td>
-<td>Reads the Aggregated Pipeline Configuration and fetches the appropriate Pipeline Template</td>
-</tr>
-<tr>
-<td><a href="../pipeline-initialization/inject-primitives/">Create the Pipeline Primitives</a></td>
-<td>Parses the Aggregated Pipeline Configuration to create the Pipeline Primitives</td>
-</tr>
-</tbody>
-</table>
-<!--Link References-->
+<h1 id="package-a-library-source-as-a-plugin">Package a Library Source as a Plugin<a class="headerlink" href="#package-a-library-source-as-a-plugin" title="Permanent link">&para;</a></h1>
+<p>Users can package their Library Source as a stand-alone Jenkins Plugin. </p>
+<p>This has a couple advantages:</p>
+<ol>
+<li><strong>Performance</strong>: Avoid fetching from a remote repository on every Pipeline Run</li>
+<li><strong>Plugin Dependencies</strong>: Ensure the Jenkins Plugins your libraries depend upon are installed</li>
+</ol>
+<h2 id="gradle-jte-plugin">Gradle JTE Plugin<a class="headerlink" href="#gradle-jte-plugin" title="Permanent link">&para;</a></h2>
+<p>To package your Library Source, the simplest path is to use the <a href="https://github.com/jenkinsci/gradle-jte-plugin">Gradle JTE Plugin</a>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">plugins</span><span class="o">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// used to packate these libraries as a jenkins plugin</span><span class="w"></span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="s2">&quot;io.jenkins.jte&quot;</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="s2">&quot;0.2.0&quot;</span><span class="w"></span>
+<span class="o">}</span><span class="w"></span>
+</code></pre></div>
+<p>You can use the configuraiton options defined in the <a href="https://github.com/jenkinsci/gradle-jte-plugin/blob/main/README.md">README</a> to configure the plugin.</p>
+<p>To package your Library Source, run <code>./gradlew jte</code>.
+The <code>hpi</code> file will be output to your projects build directory.</p>
+<p>from there, you can install the <code>hpi</code> file via the Jenkins UI.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To see an example Library Source, check out the <a href="https://github.com/steven-terrana/jte-library-scaffold">jte-library-scaffold</a>.</p>
+</div>
 
               
             </article>
@@ -2246,6 +2274,41 @@ The <code>run()</code> method fetches the job's <code>FlowDefinition</code> and 
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../lifecycle-hooks-on-failure/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Trigger Lifecycle Hooks On Failure" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Trigger Lifecycle Hooks On Failure
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../upgrade-2.0/" class="md-footer__link md-footer__link--next" aria-label="Next: 2.0 Upgrade Guide" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              2.0 Upgrade Guide
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -2284,10 +2347,10 @@ The <code>run()</code> method fetches the job's <code>FlowDefinition</code> and 
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.a6c66575.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.a6c66575.min.js"></script>
       
     
   </body>
