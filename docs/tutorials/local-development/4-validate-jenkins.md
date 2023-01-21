@@ -33,7 +33,7 @@ docker.image("maven").inside{
 
     This will validate that your local Jenkins can pull container images, run them, and then execute pipeline commands inside the launched container.
 
-![](./images/job-configuration.png)
+![Jenkins Job Configuration](./images/job-configuration.png)
 
 * Click the _Save_ button at the bottom of the screen.
 * This will redirect you back to the job's main page. Click _Build Now_ in the left-hand navigation menu.
@@ -45,4 +45,4 @@ docker.image("maven").inside{
 
 If all went well, the console output should show something like:
 
-![](./images/console-output.png)
+![Jenkins Simple Job Console Logs](./images/console-output.png)

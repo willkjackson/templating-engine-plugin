@@ -80,7 +80,7 @@ From the Jenkins home page:
 * Type `pipeline-configuration` in the `Configuration Base Directory` text box.
 * Click `Save`.
 
-![](./images/global_governance_tier.gif)
+![Global Governance Tier](./images/global_governance_tier.gif)
 
 !!! note
     You just configured your first *Governance Tier*!
@@ -104,7 +104,7 @@ We're going to apply the Pipeline Template and configuration file to every branc
 * Initialize the Repository with a README file.
 * Modify the README in order to create a branch called *test*. Push the new branch. Consult Git documentation on how to create and push a branch if you do not know how, or follow the older guide GIF below:
 
-![](./images/create_gradle_repo.gif)
+![Creating a Gradle repo](./images/create_gradle_repo.gif)
 
 ## Create a Multibranch Project
 
@@ -131,4 +131,4 @@ In this overview, you'll see two jobs in progress once the repository scan has r
 
 When these jobs complete, clicking them will show that each branch executed the Pipeline Template with the same configuration.
 
-![](./images/multibranch.gif)
+![Multibranch Configuration](./images/multibranch.gif)

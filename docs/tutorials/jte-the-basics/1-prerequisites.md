@@ -14,7 +14,7 @@ When creating your first set of pipeline libraries and externalizing the pipelin
 ## GitHub PAT in the Jenkins Credential Store
 
 !!! note
-    If you intend to create public repositories then your PAT is merely acting to authenticate to GitHub in order to avoid rate limiting; you do not need to grant any scopes to the PAT. 
+    If you intend to create public repositories then your PAT is merely acting to authenticate to GitHub in order to avoid rate limiting; you do not need to grant any scopes to the PAT.
 
     If you will be creating private repositories, you'll need to grant the `repo` scope to the PAT.
 
@@ -27,7 +27,7 @@ Create a [GitHub Personal Access Token (PAT)](https://help.github.com/en/github/
 * Select scope: `admin:org` (Full control of orgs and teams, read and write org projects)
 * Leave all other scopes blank, click the `Generate token` button.
 
-![](./images/personal-access-token.png)
+![Personal Access Token Screen](./images/personal-access-token.png)
 
 Copy this token and store it in the Jenkins credential store.
 
@@ -42,8 +42,8 @@ Copy this token and store it in the Jenkins credential store.
 * Enter `github` into the `Description` field.
 * Click `Create`.
 
-![](./images/jenkins-github-credentials.png)
+![GitHub Credentials in Jenkins](./images/jenkins-github-credentials.png)
 
 You should see your new credential under the list of `Global credentials (unrestricted)`:
 
-![](./images/jenkins-global-credentials.png)
+![Global Jenkins Credentials](./images/jenkins-global-credentials.png)

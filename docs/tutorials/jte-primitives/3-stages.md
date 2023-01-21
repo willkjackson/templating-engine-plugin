@@ -11,7 +11,6 @@ To minimize repeating ourselves in Pipeline Templates, the Stage primitive was c
 !!! note
     [View the Stage documentation here.](../../concepts/pipeline-primitives/stages.md)
 
-
 ## Define and Use a Stage
 
 A very common Stage to create is a *Continuous Integration* stage.

@@ -1,4 +1,4 @@
-# Create the Libraries
+# Creating a Library
 
 In the previous section we created a Pipeline Template that invoked `build()` and `static_code_analysis()` steps.
 
@@ -15,7 +15,7 @@ Go ahead and create a new GitHub repository in your account:
 * Click your profile picture in GitHub, and go to `Your repositories`.
 * Click the `New` button at top right and use the following configuration:
 
-![](./images/jte_basics_repo_creation.png)
+![Creating a new repo in GitHub](./images/jte_basics_repo_creation.png)
 
 It can be named whatever you like, though `jte-the-basics` would make sense.
 
@@ -43,7 +43,7 @@ It is important to understand that a library in JTE is just a _directory_, likel
 
 Push the code to the `main` branch. Your repo in the GitHub web UI should look like this:
 
-![](./images/jte_basics_initial_repo.png)
+![Initial repo](./images/jte_basics_initial_repo.png)
 
 ## Implement the Steps
 
@@ -76,7 +76,7 @@ void call() {
 
 Now that we have a GitHub repository containing pipeline libraries, we have to tell JTE where to find them.
 
-This is done by configuring a *Library Source* in Jenkins.
+This is done by configuring a _Library Source_ in Jenkins.
 
 To make our libraries accessible to every job configured to use JTE on the Jenkins instance:
 
@@ -86,13 +86,13 @@ To make our libraries accessible to every job configured to use JTE on the Jenki
 * Click `Add` under `Library Sources` -- do not edit the `Pipeline Configuration` section.
 * Ensure the `Library Provider` is set to `From SCM`.
 * Select `Git` as the `SCM` type.
-* Enter the *https* repository URL to your library repository you pushed the Groovy scripts to. It should end in `.git`.
+* Enter the _https_ repository URL to your library repository you pushed the Groovy scripts to. It should end in `.git`.
 * Under `Branch Specifier`, specify whatever branch you have been pushing changes to, be it `*/main`, `*/master`, or something else.
 * In the `Credentials` drop down menu, select the `github` credential created during the prerequisites.
 * Enter `libraries` in the `Base Directory` text box.
 * Click `Save`.
 
-![](./images/library_source.gif)
+![Library source configuration](./images/library_source.gif)
 
 !!! note
     As an aside - you can define as many Library Sources as you need. They can be defined globally for the entire Jenkins instance in `Manage Jenkins > Configure System >  Jenkins Templating Engine` or under the `Jenkins Templating Engine` configuration section on Folders, or per-job, for more complex inheritance of libraries.

@@ -81,7 +81,7 @@ void after() {
 }
 ```
 
-Take notice of the JTE-native `hookContext` variable.  This variable provides runtime context for the hook based on the "event" that is triggering the hook to run. 
+Take notice of the JTE-native `hookContext` variable.  This variable provides runtime context for the hook based on the "event" that is triggering the hook to run.
 
 !!! note
     Make sure you push your code to the `main/master` branch before running.

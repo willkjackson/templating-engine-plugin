@@ -16,7 +16,7 @@ Now that there are multiple applications with some configurations that are commo
 
 ### Modify the Governance Tier Configuration File
 
-We need to edit the pipeline configuration file (`pipeline_config.groovy`) we created earlier to represent the *common* configurations that will be applied to both apps and explicitly _allow_ these applications to add their own configurations.
+We need to edit the pipeline configuration file (`pipeline_config.groovy`) we created earlier to represent the *common* configurations that will be applied to both apps and explicitly *allow* these applications to add their own configurations.
 
 Update the `pipeline_config.groovy` file in your library repository to this:
 
@@ -36,7 +36,7 @@ Update the `pipeline_config.groovy` file in your library repository to this:
     Push this change to the `main/master` branch of your library repository.
 
 !!! important
-    When aggregating pipeline configurations, JTE applies _conditional inheritance_ during the aggregation process.
+    When aggregating pipeline configurations, JTE applies *conditional inheritance* during the aggregation process.
 
 ### Create a Pipeline Configuration File for the Maven Application
 
@@ -83,7 +83,7 @@ Now, we'll create a `GitHub Organization Project` that can automatically create 
 * Under `Project Recognizers` select `Add` and click `Jenkins Templating Engine`.
 * Click `Save`.
 
-![](./images/jte_org_config.png)
+![JTE Organization Config](./images/jte_org_config.png)
 
 After creating the GitHub Organization job in Jenkins, you will be redirected to the logs of the GitHub Organization being scanned to find repositories that match the wildcard format entered during job creation. This will scope the repositories for which jobs are created to just this lab's application repositories.
 
@@ -91,7 +91,7 @@ Once scanning has finished, go view the GitHub Organization's job page in Jenkin
 
 Explore each of these jobs to see that the `gradle` repository's pipeline loaded the `gradle` library and the `maven` repository loaded the `maven` library and both pipelines loaded the `sonarqube` library.
 
-![](./images/jte_org_jobs.png)
+![JTE Organization Jobs List](./images/jte_org_jobs.png)
 
 !!! important
     We just created a configuration where *multiple* applications used the *same* pipeline template, shared a common configuration, but still have the flexibility to choose the correct build tool for their application!

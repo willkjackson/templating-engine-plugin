@@ -2,7 +2,7 @@
 
 Docker simplifies packaging applications with all their dependencies.
 
-Through Docker, we can have a running Jenkins instance in a matter of seconds. 
+Through Docker, we can have a running Jenkins instance in a matter of seconds.
 
 In your terminal, first build a Jenkins image with docker installed. Create a `Dockerfile` in an empty directory with the following:
 
@@ -25,6 +25,7 @@ EXPOSE 8080
 ```
 
 From the same directory as your Dockerfile, build the image:
+
 ``` text
 docker build -t jenkins:lts-docker .
 ```
@@ -74,16 +75,15 @@ On Windows:
 | `-d` | Runs the container process in the background. |
 | `jenkins:lts-docker` | The container image from which to run this container. |
 
-
 !!! note
     If port 8080 is already in use by another process then this command will fail.  To run Jenkins on a different port, swap out the first 8080 to your desired port: ``<desired port number>:8080``.
 
 You can run ``docker logs -f jenkins`` to see the Jenkins logs.  It will say "Jenkins is fully up and running" when Jenkins is ready.
 
-You can validate the container launched as expected by going to ``http://localhost:8080``. 
+You can validate the container launched as expected by going to ``http://localhost:8080``.
 
-You should see the Jenkins Startup Wizard: 
+You should see the Jenkins Startup Wizard:
 
 ![initial password](./images/jenkins_initial_password.png)
 
-In the next section, we'll learn how to get past this Startup Wizard and configure the newly deployed Jenkins instance. 
+In the next section, we'll learn how to get past this Startup Wizard and configure the newly deployed Jenkins instance.

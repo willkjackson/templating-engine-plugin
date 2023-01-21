@@ -1,4 +1,4 @@
-# Write the Template
+# Writing a Template
 
 In JTE, instead of creating application-specific `Jenkinsfiles`, we create pipeline templates that represent the business logic of a pipeline in a tool-agnostic way.
 
@@ -11,7 +11,7 @@ To demonstrate this, first create a `Pipeline` job.
 * Select `Pipeline` from the list of available job types.
 * Click `OK`.
 
-![](./images/create_pipeline_job.gif)
+![Creating a pipeline job](./images/create_pipeline_job.gif)
 
 ## Write the Template
 

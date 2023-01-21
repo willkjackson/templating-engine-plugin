@@ -5,7 +5,7 @@ The purpose of this lab is to introduce you to the Jenkins Templating Engine as 
 By being able to build reusable, tool-agnostic pipeline templates and apply them to multiple applications simultaneously, you can then *remove* individual Jenkinsfiles from each source code repository.
 
 !!! important
-    In JTE, we talk a lot about the concept of governance. When we say governance, we mean that JTE allows you to *enforce* a common software delivery process by applying the the *same* pipeline template to _multiple_ repositories at the same time.
+    In JTE, we talk a lot about the concept of governance. When we say governance, we mean that JTE allows you to *enforce* a common software delivery process by applying the the *same* pipeline template to *multiple* repositories at the same time.
 
     The modularity that JTE promotes allows you to do this across teams _regardless_ of the specific tools that each application may be using.
 

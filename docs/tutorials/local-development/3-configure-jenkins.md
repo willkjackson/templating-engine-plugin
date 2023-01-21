@@ -21,7 +21,7 @@ You can print this password in your terminal by running: `docker exec jenkins ca
 
 ![init password](./images/cat-init-password.png)
 
-Copy and paste this password into the *Administrator password* text box in Jenkins.
+Copy and paste this password into the _Administrator password_ text box in Jenkins.
 
 ### 2. From the container log output
 
@@ -35,7 +35,7 @@ Copy and paste the password into the text box in Jenkins.
 
 ## Installing the Suggested Plugins
 
-After entering the initial admin password, Jenkins will bring you to a *Customize Jenkins* page.
+After entering the initial admin password, Jenkins will bring you to a _Customize Jenkins_ page.
 
 Click the `Install suggested plugins` button.
 
@@ -58,11 +58,11 @@ After creating the initial admin user, Jenkins will send you to a screen where y
 
 Then click "_Start Using Jenkins_" and you will be directed to the Jenkins home page:
 
-![](./images/jenkins-home-page.png)
+![Jenkins home page](./images/jenkins-home-page.png)
 
 ## Installing the Jenkins Templating Engine
 
-At this point, you've completed the Jenkins Startup Wizard process. 
+At this point, you've completed the Jenkins Startup Wizard process.
 
 Now, we're going to install the Jenkins Templating Engine, which can be found as the `Templating Engine Plugin` in the Plugin Manager.
 
@@ -73,7 +73,7 @@ Now, we're going to install the Jenkins Templating Engine, which can be found as
 
 At this point you should see:
 
-![](./images/jte-update-center.png)
+![Jenkins plugin manager](./images/jte-update-center.png)
 
 Make sure to select the `Templating Engine` checkbox and click the "_Download now and install after restart_" button.
 
@@ -81,7 +81,7 @@ This will direct you to a screen showing the download progress of JTE.
 
 Scroll to the bottom of the `Download progress` screen and select "_Restart Jenkins when installation is complete and no jobs are running_".
 
-![](./images/restart-post-install-jte.png)
+![Jenkins restart prompt](./images/restart-post-install-jte.png)
 
 At this point, Jenkins will restart automatically. Log in again with either the custom admin user you created earlier or the initial admin password.
 

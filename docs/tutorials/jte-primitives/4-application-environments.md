@@ -17,9 +17,9 @@ In general, library steps should not accept input parameters. Deployment steps a
 
 Understanding _why_, in general, library steps should not accept input parameters is fundamental to understanding the goals of the Jenkins Templating Engine.
 
-Let's say we had some teams in an organization leveraging SonarQube for static code analysis and others using Fortify. If the `static_code_analysis` step implemented by the `sonarqube` library took input parameters - it would then require that *every* library that implements `static_code_analysis` take the same input parameters, lest you break the interchangeability of libraries to use the same template.
+Let's say we had some teams in an organization leveraging SonarQube for static code analysis and others using Fortify. If the `static_code_analysis` step implemented by the `sonarqube` library took input parameters - it would then require that _every_ library that implements `static_code_analysis` take the same input parameters, lest you break the interchangeability of libraries to use the same template.
 
-This would mean that the `fortify` library's implementation would have to take the *same* input parameters as the `sonarqube`'s implementation - otherwise switching between the two would break the code.
+This would mean that the `fortify` library's implementation would have to take the _same_ input parameters as the `sonarqube`'s implementation - otherwise switching between the two would break the code.
 
 Being able to swap implementations of steps in and out through different libraries is the primary mechanism through which JTE supports creating reusable, tool-agnostic Pipeline Templates.
 
@@ -82,7 +82,7 @@ This step will announce it's performing an Ansible deployment and then iterate o
 
 We now need to load the `ansible` library and define the Application Environments.
 
-In your `single-job`, go to `Configure` and change the *Pipeline Configuration* to:
+In your `single-job`, go to `Configure` and change the _Pipeline Configuration_ to:
 
 ``` groovy title="Pipeline Configuration"
 libraries {
@@ -120,7 +120,7 @@ application_environments {
 
 Now that we have a library that performs a deployment step and Application Environments defined in the Pipeline Configuration, let's update the Pipeline Template to pull it all together.
 
-Update the *Jenkinsfile* (your default pipeline template in your `single-job`) to:
+Update the _Jenkinsfile_ (your default pipeline template in your `single-job`) to:
 
 ``` groovy title="Jenkinsfile (in your single-job)"
 continuous_integration() 
