@@ -8,7 +8,7 @@ A Jenkins instance will be required for this lab. If you don't have one availabl
 
 This lab continues to build upon our knowledge of the Jenkins Templating Engine so first completing the [Basics Learning Lab](../jte-the-basics/index.md) would be very helpful.
 
-In this lab we will assume you're using the same pipeline configuration repository used during The Basics lab and that it is already configured as a Library Source in the Global Governance Tier.
+In this lab we will assume you're using the same Pipeline Configuration repository used during The Basics lab and that it is already configured as a Library Source in the Global Governance Tier.
 
 ### Remove the Global Governance Tier's Pipeline Configuration
 

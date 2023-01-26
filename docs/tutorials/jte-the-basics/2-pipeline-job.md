@@ -35,4 +35,4 @@ static_code_analysis()
 !!! note
     A word on vocabulary: The entire script above is called a *Pipeline Template*. Pipeline Templates invoke *steps*, in this case `build` and `static_code_analysis`, that are implemented by *libraries*.
 
-You can click `Save` to save this configuration. In the next section we'll be creating the pipeline libraries that implement the `build` and `static_code_analysis` steps.
+You can click `Save` to save this configuration. In the next section we'll be creating the Pipeline Libraries that implement the `build` and `static_code_analysis` steps.

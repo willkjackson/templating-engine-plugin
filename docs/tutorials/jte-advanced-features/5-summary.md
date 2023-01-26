@@ -10,7 +10,7 @@ Care should be taken when exposing this functionality to users.
 
 ## Pipeline Lifecycle Hooks
 
-The Jenkins Templating Engine exposes a feature called Pipeline Lifecycle Hooks that allows methods defined within library steps to register themselves to be automatically executed in response to events from the pipeline. This includes steps that take place before and after certain triggers, and a "cleanup" step that executes after the main pipeline is finished.
+The Jenkins Templating Engine exposes a feature called Pipeline Lifecycle Hooks that allows methods defined within Library Steps to register themselves to be automatically executed in response to events from the pipeline. This includes steps that take place before and after certain triggers, and a "cleanup" step that executes after the main pipeline is finished.
 
 These annotations accept Closure parameters for conditional hook execution to dynamically determine if a hook should be invoked.
 

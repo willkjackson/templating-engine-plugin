@@ -7,9 +7,9 @@ For example, let's say we wanted to introduce Splunk(link) monitoring by sending
 How do you:
 
 * Maintain a clean, easy-to-read Pipeline Template?
-* Maintain a separation of duties between libraries as to not hardcode a Splunk integration into every library step?
+* Maintain a separation of duties between libraries as to not hard-code a Splunk integration into every Library Step?
 
-It would be great if there was a seamless way to inject functionality in response to different phases of the pipeline without having to tightly couple that functionality to existing library steps or Pipeline Templates...
+It would be great if there was a seamless way to inject functionality in response to different phases of the pipeline without having to tightly couple that functionality to existing Library Steps or Pipeline Templates...
 
 *There is!* The Jenkins Templating Engine has a neat feature we call Pipeline Lifecycle Hooks that were made for just these situations.
 
@@ -22,7 +22,7 @@ We'll walk through the Splunk use case to demonstrate this functionality.
 
 Methods defined within steps are able to register themselves to correspond to specific lifecycle events via annotations. As such, these steps are typically not invoked directly by other steps or from the Pipeline Template.
 
-Because of this, the name of the step is inconsequential but cannot conflict with other step names that are loaded.
+Because of this, the name of the step is inconsequential but can't conflict with other step names that are loaded.
 
 Therefore, we typically recommend following a naming convention of prepending the step name with the library name.
 
@@ -81,7 +81,7 @@ void after() {
 }
 ```
 
-Take notice of the JTE-native `hookContext` variable.  This variable provides runtime context for the hook based on the "event" that is triggering the hook to run.
+Take notice of the JTE-native `hookContext` variable. This variable provides runtime context for the hook based on the "event" that is triggering the hook to run.
 
 !!! note
     Make sure you push your code to the `main/master` branch before running.

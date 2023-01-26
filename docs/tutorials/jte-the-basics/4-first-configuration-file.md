@@ -25,7 +25,7 @@ libraries {
 Click `Save`.
 
 !!! important
-    The `libraries` portion of the pipeline configuration file will read much like an application's technical stack. In this case, we're telling JTE during the initialization of the pipeline that it should load the `maven` and `sonarqube` libraries.
+    The `libraries` portion of the Pipeline Configuration file will read much like an application's technical stack. In this case, we're telling JTE during the initialization of the pipeline that it should load the `maven` and `sonarqube` libraries.
 
     The `maven` library will provide the `build()` step and the `sonarqube` library will provide the `static_code_analysis()` step.
 

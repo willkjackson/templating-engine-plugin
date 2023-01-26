@@ -3,12 +3,12 @@
 While learning about Pipeline Lifecycle Hooks, we created a step that:
 
 * Implemented multiple methods.
-* Did not implement a `call` method.
+* Implemented a step without a `call` method.
 
 In this section, we're going to dive into multi-method steps in a little more detail.
 
 !!! important
-    Have you ever wondered why library steps create a method named `call`? This is because, in the Groovy scripting language, `something()` gets translated to `something.call()`.
+    Have you ever wondered why Library Steps create a method named `call`? This is because, in the Groovy scripting language, `something()` gets translated to `something.call()`.
 
 If we understand this concept, then it would make sense that we could define other methods within our steps and invoke them by their full name.
 

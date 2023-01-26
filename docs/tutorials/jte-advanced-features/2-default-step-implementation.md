@@ -20,7 +20,7 @@ The default step implementation allows you to define a step from the Pipeline Co
 ### Setbacks
 
 * The default step implementation can be a little too powerful if you're striving for a tightly governed DevSecOps pipeline. This feature should be exposed to end users with care, as it exposes a lot of the functionality to the teams that would be using the template.
-* This feature hard-codes a particular functionality from the Pipeline Configuration and does not have the same configuration flexibility that a library would have.
+* This feature hard-codes a particular functionality from the Pipeline Configuration and doesn't have the same configuration flexibility that a library would have.
 
 ## Create a Step
 

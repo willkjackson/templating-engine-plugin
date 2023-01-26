@@ -23,6 +23,6 @@ libraries {
 ```
 
 !!! note
-    If you're reusing the same Pipeline Job, your pipeline configuration may specify the `gradle` instead of the `maven` library. Either will do for the purposes of this lab, but switch it back to `maven` if it's different.
+    If you're reusing the same Pipeline Job, your Pipeline Configuration may specify the `gradle` instead of the `maven` library. Either will do for the purposes of this lab, but switch it back to `maven` if it's different.
 
-This Pipeline Job is going to be the playground where we learn about the different pipeline primitives for the rest of this lab.
+This Pipeline Job is going to be the playground where we learn about the different Pipeline Primitives for the rest of this lab.

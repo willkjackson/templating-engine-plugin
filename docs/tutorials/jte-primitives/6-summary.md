@@ -10,6 +10,6 @@ We learned a lot in this lab! Let's recap some of what we learned:
 | Application Environment | Encapsulates environment specific context, primarily for use in deployment steps. | `application_environments{}` |
 | Keywords | Externalize the act of setting variables out of Pipeline Templates and into the Pipeline Configuration. | `keywords{}` |
 
-## Recall: why shouldn't library steps take input parameters?
+## Recall: Why shouldn't Library Steps take input parameters?
 
 It fundamentally breaks the interchangeability of different implementations of the same step by different libraries by introducing a requirement that all implementations of that step accept the same parameters.

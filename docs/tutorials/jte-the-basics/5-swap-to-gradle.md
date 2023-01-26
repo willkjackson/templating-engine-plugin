@@ -4,11 +4,11 @@ The purpose of the Jenkins Templating Engine is three fold:
 
 1. **Optimize pipeline code reuse**.
 
-    Now organizations can coalesce around a portfolio of centralized, reusable pipeline libraries representing different tool integrations for their CI/CD pipelines.
+    Now organizations can coalesce around a portfolio of centralized, reusable Pipeline Libraries representing different tool integrations for their CI/CD pipelines.
 
 2. **Simplify pipeline maintainability**.
 
-    Separating a pipeline into templates, configuration files, and pipeline libraries can also be thought of as separating the *business logic* of your pipeline from the *technical implementation*. In our experience, it is significantly easier to manage a template backed by modularized pipeline libraries than it is to manage application-specific Jenkinsfiles.
+    Separating a pipeline into templates, configuration files, and Pipeline Libraries can also be thought of as separating the *business logic* of your pipeline from the *technical implementation*. In our experience, it is significantly easier to manage a template backed by modularized Pipeline Libraries than it is to manage application-specific Jenkinsfiles.
 
 3. **Provide organizational governance**.
 
@@ -55,11 +55,11 @@ void call() {
 
 ## Swap from Maven to Gradle
 
-Now that we have a swappable implementation for the `build()` step of the pipeline template, switching from Maven to Gradle is as easy as changing the libraries listed in the pipeline configuration.
+Now that we have a modifiable implementation for the `build()` step of the pipeline template, switching from Maven to Gradle is as easy as changing the libraries listed in the Pipeline Configuration.
 
 Going back to the job configuration (click the `single-job` from Jenkins home page, then `Configure`), in the `Pipeline Configuration` text box, swap the `maven` line to `gradle` and click `Save`.
 
-The pipeline configuration should now be:
+The Pipeline Configuration should now be:
 
 ``` groovy
 libraries {

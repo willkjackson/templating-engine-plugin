@@ -6,7 +6,7 @@ A Jenkins instance will be required for this lab. If you don't have one availabl
 
 ## Ability to Create GitHub Repositories
 
-When creating your first set of pipeline libraries and externalizing the pipeline configuration from Jenkins you will need to be able to create GitHub repositories on [github.com](https://github.com).
+When creating your first set of Pipeline Libraries and externalizing the Pipeline Configuration from Jenkins you will need to be able to create GitHub repositories on [github.com](https://github.com).
 
 !!! note
     Theoretically, any git-based SCM provider (Bitbucket, GitHub, GitLab, etc.) should integrate and work as expected with JTE. For the purposes of simplifying this lab, we will be using GitHub.
@@ -14,17 +14,17 @@ When creating your first set of pipeline libraries and externalizing the pipelin
 ## GitHub PAT in the Jenkins Credential Store
 
 !!! note
-    If you intend to create public repositories then your PAT is merely acting to authenticate to GitHub in order to avoid rate limiting; you do not need to grant any scopes to the PAT.
+    If you intend to create public repositories then your PAT is merely acting to authenticate to GitHub in order to avoid rate limiting; you don't need to grant any scopes to the PAT.
 
     If you will be creating private repositories, you'll need to grant the `repo` scope to the PAT.
 
 Create a [GitHub Personal Access Token (PAT)](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line). See the link for more specific directions.
 
 * Click on your profile picture at the top-right of GitHub, then `Settings`, `Developer settings`, and `Personal access tokens`.
-* Create a `Classic` token, do not use the `Fine-grained token` beta.
+* Create a `Classic` token, don't use the `Fine-grained token` beta.
 * Note/Name: `jte-the-basics`
 * Select scope: `repo` (Full control of private repositories)
-* Select scope: `admin:org` (Full control of orgs and teams, read and write org projects)
+* Select scope: `admin:org` (Full control of GitHub organizations and teams, read and write organization projects)
 * Leave all other scopes blank, click the `Generate token` button.
 
 ![Personal Access Token Screen](./images/personal-access-token.png)

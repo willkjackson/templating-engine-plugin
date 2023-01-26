@@ -8,7 +8,7 @@ In this part of the lab, we're going to create libraries for these steps to impl
 
 Libraries can either be packaged into a separate plugin for distribution or fetched directly from a source code management repository.
 
-Retrieving libraries from a repository is the most common way of storing pipeline libraries for integration with the Jenkins Templating Engine (JTE).
+Retrieving libraries from a repository is the most common way of storing Pipeline Libraries for integration with the Jenkins Templating Engine (JTE).
 
 Go ahead and create a new GitHub repository in your account:
 
@@ -35,7 +35,7 @@ Clone your new repository, then create and push the following directory structur
 ```
 
 !!! important
-    If you need a primer on Git (i.e. how to commit and push code changes) try reading over the `Making changes` section [here](https://git-scm.com/docs/gittutorial#_making_changes).
+    If you need a primer on Git (that is, how to commit and push code changes) try reading over the `Making changes` section [here](https://git-scm.com/docs/gittutorial#_making_changes).
 
     When configuring this repository as a *Library Source* for JTE in Jenkins, you will be able to configure the base directory. Since there might be other sources in this repository in the future, all of the libraries we create will be stored in the `libraries` directory.
 
@@ -52,7 +52,7 @@ In this lab, we're just getting accustomed to the Jenkins Templating Engine and 
 Generally, the most idiomatic way to define a step is to create a `call` method that takes no input parameters.
 
 !!! note
-    In future labs, we'll learn how to pass information to our steps through the pipeline configuration file.
+    In future labs, we'll learn how to pass information to our steps through the Pipeline Configuration file.
 
 Push the following code to the empty files you created in your library repo:
 
@@ -74,7 +74,7 @@ void call() {
 
 ## Configure the Library Source
 
-Now that we have a GitHub repository containing pipeline libraries, we have to tell JTE where to find them.
+Now that we have a GitHub repository containing Pipeline Libraries, we have to tell JTE where to find them.
 
 This is done by configuring a _Library Source_ in Jenkins.
 
@@ -83,7 +83,7 @@ To make our libraries accessible to every job configured to use JTE on the Jenki
 * In the left-hand navigation menu, click `Manage Jenkins`.
 * User `System Configuration`, click `Configure System`.
 * Scroll down to the `Jenkins Templating Engine` configuration section.
-* Click `Add` under `Library Sources` -- do not edit the `Pipeline Configuration` section.
+* Click `Add` under `Library Sources` -- don't edit the `Pipeline Configuration` section.
 * Ensure the `Library Provider` is set to `From SCM`.
 * Select `Git` as the `SCM` type.
 * Enter the _https_ repository URL to your library repository you pushed the Groovy scripts to. It should end in `.git`.
@@ -92,7 +92,7 @@ To make our libraries accessible to every job configured to use JTE on the Jenki
 * Enter `libraries` in the `Base Directory` text box.
 * Click `Save`.
 
-![Library source configuration](./images/library_source.gif)
+![Library Source Configuration](./images/library_source.gif)
 
 !!! note
     As an aside - you can define as many Library Sources as you need. They can be defined globally for the entire Jenkins instance in `Manage Jenkins > Configure System >  Jenkins Templating Engine` or under the `Jenkins Templating Engine` configuration section on Folders, or per-job, for more complex inheritance of libraries.

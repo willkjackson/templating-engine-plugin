@@ -1,12 +1,12 @@
 # Summary
 
-We learned a lot in this lab!  Let's recap some of what we learned:
+We learned a lot in this lab! Let's recap some of what we learned:
 
 ## GitHub Credentials in Jenkins
 
 We learned how to create a Personal Access Token and store it in the Jenkins credential store.
 
-While credentials are not strictly needed for public repositories, GitHub will rate limit your Jenkins instance's API requests, which can dramatically slow down the pipeline and cause it to fail.
+While credentials aren't strictly needed for public repositories, GitHub will rate limit your Jenkins instance's API requests, which can dramatically slow down the pipeline and cause it to fail.
 
 ## Different Types of Jenkins Jobs
 
@@ -34,7 +34,7 @@ We learned that:
 
 * **Governance Tiers** are a way to **externalize configuration** into source code repositories.
 * A Governance Tier is made up of a Pipeline Configuration repository and a set of Library Sources.
-* Pipeline Configuration repositories optionally contain a pipeline template and a pipeline configuration file.
+* Pipeline Configuration repositories optionally contain a pipeline template and a Pipeline Configuration file.
 * The Jenkinsfile is the **default pipeline template** in a Governance Tier.
 
 ## How can we reuse Pipeline Templates?

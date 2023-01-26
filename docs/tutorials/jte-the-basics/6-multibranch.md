@@ -3,20 +3,20 @@
 So far we've learned:
 
 * What a Pipeline Template is (the business logic of your pipeline).
-* How to create some mock pipeline libraries (just Groovy files implementing a `call()` method inside a directory in a repository).
-* What the pipeline configuration does (defines libraries to implement the template so it actually does things).
-* How to use the same pipeline template with two different tech stacks by modifying the pipeline configuration.
+* How to create some mock Pipeline Libraries (just Groovy files implementing a `call()` method inside a directory in a repository).
+* What the Pipeline Configuration does (defines libraries to implement the template so it actually does things).
+* How to use the same pipeline template with two different tech stacks by modifying the Pipeline Configuration.
 
 Next, we're going to learn how to apply a Pipeline Template to an entire GitHub repository.
 
-This is a more realistic scenario and it has the added benefit of taking the Pipeline Template and pipeline configuration file out of the Jenkins UI and storing them in a pipeline configuration repository.
+This is a more realistic scenario and it has the added benefit of taking the Pipeline Template and Pipeline Configuration file out of the Jenkins UI and storing them in a Pipeline Configuration repository.
 
 ## Move the Pipeline Template to a Repository
 
 When creating libraries, we created a GitHub JTE library repository and stored the libraries in a subdirectory called `libraries`. In this example, we can create a new subdirectory at the root of the repository called `pipeline-configuration`.
 
 !!! note
-    The actual names of the `libraries` and `pipeline-configuration` subdirectories do not matter and are configurable, the convention is to keep them named like this, however.
+    The actual names of the `libraries` and `pipeline-configuration` subdirectories don't matter and are configurable, the convention is to keep them named like this, however.
 
 Within this `pipeline-configuration` directory create a file called `Jenkinsfile` and populate it with the same contents as the `Pipeline Template` text box in the Jenkins UI.
 
@@ -33,7 +33,7 @@ static_code_analysis()
 In the same `pipeline-configuration` directory, create a file called `pipeline_config.groovy`.
 
 !!! important
-    When the pipeline configuration is stored in a file in a source code repository, it will always be called `pipeline_config.groovy`.
+    When the Pipeline Configuration is stored in a file in a source code repository, it will always be called `pipeline_config.groovy`.
 
 Populate this file with the same contents as the `Pipeline Configuration` text box in the Jenkins UI for the `single-job` you created and updated earlier:
 
@@ -65,7 +65,7 @@ The file structure in your GitHub repository should now look like this:
 
 ### Create the Global Governance Tier
 
-Now that we have our template and pipeline configuration externalized into a source code repository, we have to tell Jenkins where to find it.
+Now that we have our template and Pipeline Configuration externalized into a source code repository, we have to tell Jenkins where to find it.
 
 From the Jenkins home page:
 
@@ -74,7 +74,7 @@ From the Jenkins home page:
 * Scroll down to the `Jenkins Templating Engine` configuration section.
 * Under `Pipeline Configuration` select `From SCM`.
 * Select `Git` for the `Source Location` drop down menu.
-* Under `Repository URL` type the *https* URL for the GitHub repository containing the libraries, template, and configuration file.
+* Under `Repository URL` type the *https* URL of the GitHub repository containing the libraries, template, and configuration file.
 * In the `Credentials` drop down menu, select the `github` credential created during the prerequisites.
 * Under `Branches to build` you may have to specify `*/main`, `*/master` or something else.
 * Type `pipeline-configuration` in the `Configuration Base Directory` text box.
@@ -87,7 +87,7 @@ From the Jenkins home page:
 
     Governance Tiers are the combination of:
 
-    * A pipeline configuration repository specifying where the pipeline configuration file and Pipeline Templates can be found.
+    * A Pipeline Configuration repository specifying where the Pipeline Configuration file and Pipeline Templates can be found.
     * A set of library sources.
 
     When done in `Manage Jenkins > Configure System` it's called the Global Governance Tier and applies to every job on the Jenkins instance.
@@ -102,7 +102,7 @@ We're going to apply the Pipeline Template and configuration file to every branc
 
 * Create a GitHub Repository that will serve as our mock application repository named `jte-the-basics-app-gradle`.
 * Initialize the Repository with a README file.
-* Modify the README in order to create a branch called *test*. Push the new branch. Consult Git documentation on how to create and push a branch if you do not know how, or follow the older guide GIF below:
+* Modify the README in order to create a branch called *test*. Push the new branch. Consult Git documentation on how to create and push a branch if you don't know how, or follow the older guide GIF below:
 
 ![Creating a Gradle repo](./images/create_gradle_repo.gif)
 
@@ -121,7 +121,7 @@ Now that we have a GitHub repository representing our application, we can create
 * Click `OK` to create the job.
 * Under `Branch Sources > Add Source` select `GitHub`.
 * Select your `github` credential under the `Credentials` drop down menu.
-* Enter the *https* repository URL for `jte-the-basics-app-gradle` under `Repository HTTPS URL`.
+* Enter the *https* repository URL of `jte-the-basics-app-gradle` under `Repository HTTPS URL`.
 * Under `Build Configuration` select `Jenkins Templating Engine` from the `Mode` drop-down menu.
 * Click `Save`.
 

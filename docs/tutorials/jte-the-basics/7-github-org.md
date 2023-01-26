@@ -6,17 +6,17 @@ Let's walk through how you would setup JTE to this situation where one applicati
 
 ## Create a New GitHub Repository
 
-We already have a pipeline configuration repository that has our Pipeline Template, pipeline configuration file, and pipeline libraries as well as a repository that represents an application using Gradle.
+We already have a Pipeline Configuration repository that has our Pipeline Template, Pipeline Configuration file, and Pipeline Libraries as well as a repository that represents an application using Gradle.
 
 Follow the same procedure as before when creating the gradle application's repository to create a Maven application repository named `jte-the-basics-app-maven`.
 
 ## Modify the Pipeline Configurations
 
-Now that there are multiple applications with some configurations that are common and some configurations that are unique, we need to introduce the concept of pipeline configuration aggregation.
+Now that there are multiple applications with some configurations that are common and some configurations that are unique, we need to introduce the concept of Pipeline Configuration aggregation.
 
 ### Modify the Governance Tier Configuration File
 
-We need to edit the pipeline configuration file (`pipeline_config.groovy`) we created earlier to represent the *common* configurations that will be applied to both apps and explicitly *allow* these applications to add their own configurations.
+We need to edit the Pipeline Configuration file (`pipeline_config.groovy`) we created earlier to represent the *common* configurations that will be applied to both apps and explicitly *allow* these applications to add their own configurations.
 
 Update the `pipeline_config.groovy` file in your library repository to this:
 
@@ -31,12 +31,12 @@ Update the `pipeline_config.groovy` file in your library repository to this:
 
     The application repositories will each get their own `pipeline_config.groovy` to indicate if they are using the `maven` or the `gradle` library.
 
-    Since we want to allow these apps to add _additional_ configurations, we need to be explicit about that by annotating the `libraries` block with `@merge` in the pipeline configuration.
+    Since we want to allow these apps to add _additional_ configurations, we need to be explicit about that by annotating the `libraries` block with `@merge` in the Pipeline Configuration.
 
     Push this change to the `main/master` branch of your library repository.
 
 !!! important
-    When aggregating pipeline configurations, JTE applies *conditional inheritance* during the aggregation process.
+    When aggregating Pipeline Configurations, JTE applies *conditional inheritance* during the aggregation process.
 
 ### Create a Pipeline Configuration File for the Maven Application
 
@@ -49,7 +49,7 @@ libraries {
 ```
 
 !!! note
-    Since this application will inherit the global configurations defined in the Governance Tier, we don't have to duplicate the configuration of loading the `sonarqube` library in the repo-level pipeline configuration.
+    Since this application will inherit the global configurations defined in the Governance Tier, we don't have to duplicate the configuration of loading the `sonarqube` library in the repo-level Pipeline Configuration.
 
 ### Create a Pipeline Configuration File for the Gradle Application
 

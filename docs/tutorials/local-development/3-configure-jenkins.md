@@ -79,7 +79,7 @@ Make sure to select the `Templating Engine` checkbox and click the "_Download no
 
 This will direct you to a screen showing the download progress of JTE.
 
-Scroll to the bottom of the `Download progress` screen and select "_Restart Jenkins when installation is complete and no jobs are running_".
+Scroll to the bottom of the `Download progress` screen and select "_Restart Jenkins when installation is complete and no jobs are running_."
 
 ![Jenkins restart prompt](./images/restart-post-install-jte.png)
 

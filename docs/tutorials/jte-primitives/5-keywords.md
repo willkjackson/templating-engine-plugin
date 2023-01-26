@@ -2,7 +2,7 @@
 
 ## What is a Keyword?
 
-Keywords allow you to define variables in the pipeline configuration that can be referenced in your Pipeline Template. This allows you to keep templates as readable as possible by externalizing the definition of complex variables out of the template.
+Keywords allow you to define variables in the Pipeline Configuration that can be referenced in your Pipeline Template. This allows you to keep templates as readable as possible by externalizing the definition of complex variables out of the template.
 
 The most common use case so far for Keywords is storing regular expressions that map to common branch names in the [GitFlow Branching Strategy](https://datasift.github.io/gitflow/IntroducingGitFlow.html) to be used in evaluating whether or not aspects of the pipeline should execute based on a matching branch.
 

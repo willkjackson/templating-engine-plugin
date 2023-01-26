@@ -13,7 +13,7 @@ We're going to run through a couple quick steps to ensure that the deployed Jenk
 
 ## Configure a Pipeline
 
-* Scroll down to the _Pipeline_ configuration section.
+* Scroll down to the _Pipeline_ Configuration section.
 * The _Definition_ drop down should already be set to _Jenkins Templating Engine_.
 
 !!! important
